@@ -5,7 +5,6 @@
 # Session Data files
 .RData
 
-*_files/
 
 .DS_Store
 

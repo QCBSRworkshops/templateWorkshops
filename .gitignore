@@ -9,7 +9,6 @@
 
 .DS_Store
 
-*.html
 !*qcbsR-header.html
 
 # Example code in package build process

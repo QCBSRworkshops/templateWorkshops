@@ -5,6 +5,13 @@
 # Session Data files
 .RData
 
+*_files/
+
+.DS_Store
+
+*.html
+!*qcbsR-header.html
+
 # Example code in package build process
 *-Ex.R
 

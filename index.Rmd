@@ -1,6 +1,6 @@
 ---
-title: "R workshops: Template"
-subtitle: "QCBS R Workshop Series"
+title: "QCBS R workshops template"
+subtitle: "<hr>"
 author: "Québec Centre for Biodiversity Science"
 output:
   xaringan::moon_reader:
@@ -11,37 +11,46 @@ output:
     css: ["default", "qcbsR.css", "qcbsR-fonts.css"]
     nature:
       beforeInit: "qcbsR-macros.js"
+      highlightStyle: github
+      highlightLines: true
 ---
 
-## R Markdown
+
+# R Markdown
+
+<br>
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
 
+
 ---
-## Theme Xaringan
+# Theme Xaringan
 
-Install the **xaringan** package from Github:
+<br>
 
-```{r, eval = F}
-devtools::install_github("yihui/xaringan")
+Install the **xaringan** package from the [CRAN](https://cran.r-project.org/web/packages/xaringan/index.html):
+
+```{r, eval = FALSE}
+install.packages("yihui/xaringan")
 ```
 ---
-## Setup for your presentation
+# Setup for your presentation
 
-```{r setup, echo = T}
+<br>
+
+```{r setup, echo = TRUE}
 knitr::opts_chunk$set(
   comment = "#",
   collapse = TRUE,
   warning = FALSE,
   message = FALSE,
-  fig.width=5, fig.height=5,
+  fig.width=6, fig.height=6,
+  fig.retina = 3,
   fig.align = 'center'
 )
-```
 
-```{r, echo = T}
 options(repos=structure(c(CRAN="http://cran.r-project.org")))
 ```
 
@@ -50,13 +59,15 @@ class: inverse, center, middle
 
 # Section slide
 
+<hr>
+
 ## with a nice subtitle
 
 ---
 
-# Headers (level 1)
+# Headers 1 (with a blue background)
 
-## Header 2
+## Header 2 (similar to h1 with no background)
 
 ### Header 3
 
@@ -68,10 +79,13 @@ class: inverse, center, middle
 
 Change slide using 3 dashes `---` (no space after the dashes)
 
----
-## Modifying text
 
-#### Text size
+
+
+---
+# Text Formatting
+
+### Text sizes
 
 - normal size ( $\LaTeX$-friendly terms)
 - `.huge[huge]` &nbsp; .huge[huge]
@@ -83,14 +97,14 @@ Change slide using 3 dashes `---` (no space after the dashes)
 
 
 ---
-## Modifying text
+# Text Formatting
 
-#### Special class
+### Special class
 
 - `.alert[alert]` .alert[alert]
 - `.comment[comment]` .comment[comment]
 
-#### Use remarkjs's macros
+### Use remarkjs's macros
 
 - `![:scale 40%](path/to/img.png)` to scale an image
 - `![:faic](arrow-right)` &nbsp; ![:faic](arrow-right)
@@ -98,7 +112,7 @@ Change slide using 3 dashes `---` (no space after the dashes)
 - See [FontAwesome cheatsheet](https://fontawesome.com/v4.7.0/cheatsheet/)
 
 ---
-## Subsection Slide with bullet points
+# Subsection Slide with bullet points
 
 * a picture
 * says more
@@ -111,7 +125,7 @@ or
 - than a thousand words
 
 ---
-## Vertical Slide with bullet points
+# Vertical Slide with bullet points
 
 - Level 1 item
   * Level 2 item
@@ -120,7 +134,7 @@ or
 
 
 ---
-## Subsection Slide with ordered items
+# Subsection Slide with ordered items
 
 1. item 1
 1. item 2
@@ -131,30 +145,35 @@ or
 2. item 2
 
 ---
-## Vertical Slide with incremental bullets
+# Vertical Slide with incremental bullets
+
+<br>
 
 The easiest way to build incremental slides is...
---
-to use two dashes `--` to separate content on a slide.
 
 --
 
-You can divide a slide in _any way you want_.
+to use **two dashes** `--` to separate content on a slide, and even bullet points:
+
 
 --
 
 - Bullet 1
-
 --
 
 - Bullet 2
-
 --
 
 - Bullet 3
 
+
+<br>
+
+And whenever you feel like a line break is needed, simply use `<br>`!
+
+
 ---
-## Vertical Slide with Two Columns
+# Vertical Slide with Two Columns
 
 .pull-left[
 - You can place 2 figures on a slide
@@ -170,7 +189,7 @@ You can divide a slide in _any way you want_.
 ]
 
 ---
-## Table
+# Table
 
 Colons can be used to align columns.
 
@@ -182,17 +201,23 @@ Colons can be used to align columns.
 | stuff         | stuff         | 123           |
 | stuff         | stuff         | 456           |
 
----
 
-## Text alignment
+---
+# Text alignment
+
+<br>
 
 .left[
 `.left[Left-aligned text]`
 ]
 
+<br>
+
 .center[
 `.center[Centered text]`
 ]
+
+<br>
 
 .right[
 `.right[Right-aligned text]`
@@ -223,10 +248,12 @@ or
 ]
 
 ---
-## Images and text
+# Images and text
+
+<br>
 
 .pull-left2[
-Here I used `.pull-left2[]` and `.pull-right2[]` to create a 2 column slide, where the left column is larger than the right column.
+Here `.pull-left2[]` and `.pull-right2[]`  are used to create a 2 column slide, where the left column is larger than the right column.
 ]
 
 .pull-right2[
@@ -240,60 +267,73 @@ class: inverse, center, middle
 
 # Use R!
 
+<hr>
+
 ## Few examples
 
 ---
-## Code chunk
+# Code chunk
 
-You can embed an R code chunk like this:
+You can embed an R code chunk like so:
 
-```{r}
+    ```{R}
+    library(datasets)
+    summary(cars)
+    ```
+which yields:
+
+```{R}
 library(datasets)
 summary(cars)
 ```
 
 ---
-## Including Plots
+# Including Plots
 
-```{r}
+```{R}
 plot(pressure)
 ```
 
 
 ---
-## Code chunk options
+# Code chunk options
+<br>
 
-- `echo`
+- `echo`:
   - `echo = TRUE` (default) to include R source code in the output file.
   - `echo = FALSE` to prevent printing of the R source code.
   - `echo = c(2:3)` or `-1` to include only line 2 and 3 from the R source code.
-- `eval`
+- `eval`:
   - `eval = TRUE` (default) to evaluate the code chunk.
   - `eval = FALSE` to prevent evaluating the code chunk.
   - `eval = c(2:3)` or `-1` to evaluate only line 2 and 3 from the R code.
 
 
-
 ---
-## Code chunk options
+# Code chunk options
+
+<br>
+
 
 - `fig.width`, `fig.height` to define width and height of the resulting plots
 - `fig.align` to align the resulting plots
 
-.alert[See more `knitr` options [here](https://yihui.name/knitr/options/)]
+.alert[See more code chunk options at <https://yihui.name/knitr/options/>]
+
 
 ---
-## Including Plots
+# Including Plots
 
 With `echo = TRUE`:
 ```{r, echo=T, fig.width=7, fig.height=3.5}
-par(mfrow=c(1,2), mar = c(4,4,0,1))
+par(mfrow=c(1,2), mar = c(4,4,0,1), las = 1)
 plot(pressure)
 plot(cars)
 ```
 
+
 ---
-## Including Plots
+# Including Plots
 
 With `echo = -1`:
 ```{r, echo=-1, fig.width=7, fig.height=3.5}
@@ -303,13 +343,25 @@ plot(cars)
 ```
 
 ---
-## Challenge slide! ![:cube]()
+# Including Plots
+
+
+If the option `highlightLines: true` is used for the presentation (declared in the YAML header), then add `#<<` at the end of the lines to be highlighted.
+
+```{r, echo=TRUE, fig.width=7, fig.height=3.5}
+par(mfrow=c(1,2), mar = c(4,4,0,1), las = 1)
+plot(pressure) #<<
+plot(cars) #<<
+```
+
+---
+# Challenge slide! ![:cube]()
 
 To include the rubicube in the challenge slide, you just need to type `![:cube]()` next to the slide title!
 
 
 ---
-## Math Expressions
+# Math Expressions
 
 You can write $\LaTeX$ math expressions inside a pair of dollar signs, e.g. `$\alpha+\beta$` renders $\alpha+\beta$.
 
@@ -323,21 +375,40 @@ class: inverse, center, middle
 
 # Keyboard shortcuts
 
+<hr>
+
+<br><br>
+
 ---
-## Keyboard shortcuts
+# Keyboard shortcuts
 
 To see these shortcuts during a presentation, press **h** or **?**
 
 .center[![:scale 75%](images/shortcuts.png)]
 
 ---
-## Questions? Comments? Suggestions?
+# Questions? Comments? Suggestions?
 
-Please email : Marie-Hélène Brice @ marie-helene.brice@umontreal.ca
+<br>
+
+##### Use the GitHub repository
+
+###### ![:faic](github) <https://github.com/QCBSRworkshops/>
+
+<br>
+
+##### or contact Marie-Hélène
+
+###### ![:faic](envelope) [marie-helene.brice@umontreal.ca](mailto:marie-helene.brice@umontreal.ca)
+
 
 ---
 class: inverse, center, bottom
 
 # Thank you for your implication!
 
+<hr>
+
 ![:scale 50%](images/qcbs_logo.png)
+
+<br>

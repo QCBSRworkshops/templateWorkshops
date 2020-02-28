@@ -38,7 +38,8 @@ html {
   background-color: #f3f3f3;
   border-radius: 5px;
   border: 1px solid #aaa;
-  padding: 2px !important;
+  padding: 1px !important;
+  font-size: 80%;
 }
 
 .remark-code-line-highlighted {
@@ -206,6 +207,10 @@ a {
 .pull-right2 {
   float: right;
   width: 27%;
+}
+
+.pull-right2, .pull-right2 p {
+  padding-left: 0rem ;
 }
 
 /* Blockquote */

@@ -277,13 +277,11 @@ class: inverse, center, middle
 You can embed an R code chunk like so:
 
     ```{R}
-    library(datasets)
     summary(cars)
     ```
 which yields:
 
 ```{R}
-library(datasets)
 summary(cars)
 ```
 
@@ -357,7 +355,7 @@ plot(cars) #<<
 ---
 # Challenge slide! ![:cube]()
 
-To include the rubicube in the challenge slide, you just need to type `![:cube]()` next to the slide title!
+To include the Rubik's cube in the challenge slide, you just need to type `![:cube]()` next to the slide title!
 
 
 ---

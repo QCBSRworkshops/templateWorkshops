@@ -323,7 +323,7 @@ plot(pressure)
 # Including Plots
 
 With `echo = TRUE`:
-```{r, echo=T, fig.width=7, fig.height=3.5}
+```{r, echo= TRUE, fig.width=7, fig.height=3.5}
 par(mfrow=c(1,2), mar = c(4,4,0,1), las = 1)
 plot(pressure)
 plot(cars)
@@ -359,7 +359,7 @@ To include the Rubik's cube in the challenge slide, you just need to type `![:cu
 
 
 ---
-# Math Expressions
+# Math - use `$` 
 
 You can write $\LaTeX$ math expressions inside a pair of dollar signs, e.g. `$\alpha+\beta$` renders $\alpha+\beta$.
 

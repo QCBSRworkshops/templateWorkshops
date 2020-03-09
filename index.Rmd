@@ -276,13 +276,17 @@ class: inverse, center, middle
 
 You can embed an R code chunk like so:
 
-    ```{R}
-    summary(cars)
-    ```
+
+      ```{R, eval = FALSE}
+      library(datasets)
+      cars[1:2,]
+      ```
+
 which yields:
 
 ```{R}
-summary(cars)
+library(datasets)
+cars[1:2,]
 ```
 
 ---
@@ -359,7 +363,7 @@ To include the Rubik's cube in the challenge slide, you just need to type `![:cu
 
 
 ---
-# Math - use `$` 
+# Math - use `$`
 
 You can write $\LaTeX$ math expressions inside a pair of dollar signs, e.g. `$\alpha+\beta$` renders $\alpha+\beta$.
 

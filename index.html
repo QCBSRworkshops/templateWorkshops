@@ -284,29 +284,22 @@ class: inverse, center, middle
 
 You can embed an R code chunk like so:
 
-    
-    ```r
-    summary(cars)
-    #      speed           dist       
-    #  Min.   : 4.0   Min.   :  2.00  
-    #  1st Qu.:12.0   1st Qu.: 26.00  
-    #  Median :15.0   Median : 36.00  
-    #  Mean   :15.4   Mean   : 42.98  
-    #  3rd Qu.:19.0   3rd Qu.: 56.00  
-    #  Max.   :25.0   Max.   :120.00
-    ```
+
+      
+      ```r
+      library(datasets)
+      cars[1:2,]
+      ```
+
 which yields:
 
 
 ```r
-summary(cars)
-#      speed           dist       
-#  Min.   : 4.0   Min.   :  2.00  
-#  1st Qu.:12.0   1st Qu.: 26.00  
-#  Median :15.0   Median : 36.00  
-#  Mean   :15.4   Mean   : 42.98  
-#  3rd Qu.:19.0   3rd Qu.: 56.00  
-#  Max.   :25.0   Max.   :120.00
+library(datasets)
+cars[1:2,]
+#   speed dist
+# 1     4    2
+# 2     4   10
 ```
 
 ---
@@ -394,7 +387,7 @@ To include the Rubik's cube in the challenge slide, you just need to type `![:cu
 
 
 ---
-# Math - use `$` 
+# Math - use `$`
 
 You can write `\(\LaTeX\)` math expressions inside a pair of dollar signs, e.g. `$\alpha+\beta$` renders `\(\alpha+\beta\)`.
 
@@ -492,6 +485,42 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+(function() {
+  "use strict"
+  /* Replace <script> tags in slides area to make them executable
+   *
+   * Runs after post-processing of markdown source into slides and replaces only
+   * <script>s on the last slide of continued slides using the .has-continuation
+   * class added by xaringan. Finally, any <script>s in the slides area that
+   * aren't executed are commented out.
+   */
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+  var scriptsNotExecuted = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container.has-continuation script'
+  );
+  if (!scriptsNotExecuted.length) return;
+  for (var i = 0; i < scriptsNotExecuted.length; i++) {
+    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
+    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
 // adds .remark-code-has-line-highlighted class to <pre> parent elements
 // of code chunks containing highlighted lines with class .remark-code-line-highlighted
 (function(d) {
@@ -509,17 +538,6 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
-
-<script>
-(function() {
-  var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; i++) {
-    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
-      links[i].target = '_blank';
-    }
-  }
-})();
-</script>
 
 <script>
 slideshow._releaseMath = function(el) {

@@ -245,6 +245,15 @@ a:hover {
   background-color: transparent;
 }
 
+.inverse h1 {
+  font-size: 2.8rem;
+}
+.inverse h2 {
+  font-size: 2.4rem;
+}
+.inverse h3 {
+  font-size: 2rem;
+}
 
 /* Table */
 

@@ -161,16 +161,24 @@ a:hover {
 
 .huge {
   font-size: 1.6em;
+  font-weight: 500;
+}
+
+.xlarge {
+  font-size: 1.25em;
   font-weight: 400;
 }
 
 .large {
-  font-size: 1.2em;
-  font-weight: 400;
+  font-size: 1.1em;
 }
 
 .small {
   font-size: .9em;
+}
+
+.xsmall {
+  font-size: .75em;
 }
 
 .tiny {

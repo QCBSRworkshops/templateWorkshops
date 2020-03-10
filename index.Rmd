@@ -89,9 +89,11 @@ Change slide using 3 dashes `---` (no space after the dashes)
 
 - normal size ( $\LaTeX$-friendly terms)
 - `.huge[huge]` &nbsp; .huge[huge]
+- `.xlarge[xlarge]` &nbsp; .xlarge[xlarge]
 - `.large[large]` &nbsp; .large[large]
 - `.small[small]` &nbsp; .small[small]
-- `.tiny[tiny]` &nbsp; .small[tiny]
+- `.xsmall[xsmall]` &nbsp; .xsmall[xsmall]
+- `.tiny[tiny]` &nbsp; .tiny[tiny]
 - `*italic*` &nbsp; *italic*
 - `**bold**` &nbsp; **bold**
 
@@ -106,7 +108,7 @@ Change slide using 3 dashes `---` (no space after the dashes)
 - `[link](https://github.com/QCBSRworkshops/templateWorkshops)` [link](https://github.com/QCBSRworkshops/templateWorkshops)
 - use back-ticks for `inline code` that can also includes [`links`](https://rmarkdown.rstudio.com/lesson-4.html)
 
-### Use remarkjs's macros
+### Custom remarkjs's macros
 
 - `![:scale 40%](path/to/img.png)` to scale an image
 - `![:faic](arrow-right)` &nbsp; ![:faic](arrow-right)

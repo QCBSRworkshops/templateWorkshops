@@ -129,15 +129,23 @@ hr {
 }
 
 
-/* Code */
+/* links */
 a, a > code {
   color: #309493;
   font-weight: 400;
-}
-
-a {
   text-decoration: underline;
 }
+
+a:hover {
+  font-weight: 700;
+  text-decoration-style: double;
+}
+
+.remark-inline-code a {
+  text-decoration: none;
+}
+
+
 
 /* MathJax */
 .mjx-chtml{ font-size: 100% !important; }
@@ -289,7 +297,3 @@ table, td, th {
   content: url(https://qcbs.ca/wp-content/uploads/2010/05/logo_small_grey-01.png);
   transform: scale(.25);
 }
-
-
-
-

@@ -130,21 +130,17 @@ hr {
 
 
 /* links */
-a, a > code {
+a {
   color: #309493;
   font-weight: 400;
-  text-decoration: underline;
 }
-
+a > code {
+  color: #309493;
+}
 a:hover {
   font-weight: 700;
-  text-decoration-style: double;
+  text-decoration-style: underline;
 }
-
-.remark-inline-code a {
-  text-decoration: none;
-}
-
 
 
 /* MathJax */

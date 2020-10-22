@@ -1,5 +1,5 @@
 ---
-title: "QCBS R workshops template"
+title: "Template for the QCBS R Workshop Series"
 subtitle: "<hr>"
 author: "Québec Centre for Biodiversity Science"
 output:
@@ -26,11 +26,11 @@ When you click the **Knit** button a document will be generated that includes bo
 
 
 ---
-# Theme Xaringan
+# Theme `xaringan`
 
 <br>
 
-Install the **xaringan** package from the [CRAN](https://cran.r-project.org/web/packages/xaringan/index.html):
+Install the `xaringan` package from the [CRAN](https://cran.r-project.org/web/packages/xaringan/index.html):
 
 ```{r, eval = FALSE}
 install.packages("yihui/xaringan")
@@ -394,6 +394,23 @@ To see these shortcuts during a presentation, press **h** or **?**
 .center[![:scale 75%](images/shortcuts.png)]
 
 ---
+# Classes
+
+You may use classes to change the structure of your slide
+
+```
+---
+exclude: true
+class: inverse, center, middle
+
+Content goes here
+---
+```
+
+You may hide slides by applying
+
+---
+
 # Questions? Comments? Suggestions?
 
 <br>
@@ -404,11 +421,14 @@ To see these shortcuts during a presentation, press **h** or **?**
 
 <br>
 
-##### or contact Marie-Hélène
+##### or contact the coordinators of the QCBS R Workshop Series
 
-###### ![:faic](envelope) [marie-helene.brice@umontreal.ca](mailto:marie-helene.brice@umontreal.ca)
+###### ![:faic](envelope) [Current coordinators](https://wiki.qcbs.ca/r#questions)
 
 
+
+
+See [here](https://github.com/QCBSRworkshops/templateWorkshops/graphs/contributors) to find the contributors and developers of this template. 
 ---
 class: inverse, center, bottom
 

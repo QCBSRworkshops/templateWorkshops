@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>QCBS R workshops template</title>
+    <title>Template for the QCBS R Workshop Series</title>
     <meta charset="utf-8" />
     <meta name="author" content="Québec Centre for Biodiversity Science" />
+    <script src="assets/header-attrs-2.4/header-attrs.js"></script>
     <link href="assets/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
@@ -14,7 +15,7 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# QCBS R workshops template
+# Template for the QCBS R Workshop Series
 ## <hr>
 ### Québec Centre for Biodiversity Science
 
@@ -32,16 +33,15 @@ When you click the **Knit** button a document will be generated that includes bo
 
 
 ---
-# Theme Xaringan
+# Theme `xaringan`
 
 &lt;br&gt;
 
-Install the **xaringan** package from the [CRAN](https://cran.r-project.org/web/packages/xaringan/index.html):
+Install the `xaringan` package from the [CRAN](https://cran.r-project.org/web/packages/xaringan/index.html):
 
 
 ```r
 install.packages("yihui/xaringan")
-11111111111111111111111111111111111111111111111111111111111111111111111111111111
 ```
 ---
 # Setup for your presentation
@@ -419,6 +419,25 @@ To see these shortcuts during a presentation, press **h** or **?**
 .center[![:scale 75%](images/shortcuts.png)]
 
 ---
+exclude: true
+
+# Classes
+
+You may use classes to change the structure of your slide
+
+```
+---
+exclude: true
+class: inverse, center, middle
+
+Content goes here
+---
+```
+
+You may hide slides by applying
+
+---
+
 # Questions? Comments? Suggestions?
 
 &lt;br&gt;
@@ -429,11 +448,14 @@ To see these shortcuts during a presentation, press **h** or **?**
 
 &lt;br&gt;
 
-##### or contact Marie-Hélène
+##### or contact the coordinators of the QCBS R Workshop Series
 
-###### ![:faic](envelope) [marie-helene.brice@umontreal.ca](mailto:marie-helene.brice@umontreal.ca)
+###### ![:faic](envelope) [Current coordinators](https://wiki.qcbs.ca/r#questions)
 
 
+
+
+See [here](https://github.com/QCBSRworkshops/templateWorkshops/graphs/contributors) to find the contributors and developers of this template. 
 ---
 class: inverse, center, bottom
 
@@ -493,30 +515,20 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
 })();
 (function() {
   "use strict"
-  /* Replace <script> tags in slides area to make them executable
-   *
-   * Runs after post-processing of markdown source into slides and replaces only
-   * <script>s on the last slide of continued slides using the .has-continuation
-   * class added by xaringan. Finally, any <script>s in the slides area that
-   * aren't executed are commented out.
-   */
+  // Replace <script> tags in slides area to make them executable
   var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
+    '.remark-slides-area .remark-slide-container script'
   );
   if (!scripts.length) return;
   for (var i = 0; i < scripts.length; i++) {
     var s = document.createElement('script');
     var code = document.createTextNode(scripts[i].textContent);
     s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
     scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-  var scriptsNotExecuted = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container.has-continuation script'
-  );
-  if (!scriptsNotExecuted.length) return;
-  for (var i = 0; i < scriptsNotExecuted.length; i++) {
-    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
-    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
   }
 })();
 (function() {

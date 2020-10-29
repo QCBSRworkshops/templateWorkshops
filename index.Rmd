@@ -67,7 +67,7 @@ class: inverse, center, middle
 
 # Headers 1 (with a blue background)
 
-## Header 2 (similar to h1 with no background)
+## Header 2 (similar to `h1` with no blue background)
 
 ### Header 3
 
@@ -77,10 +77,11 @@ class: inverse, center, middle
 
 ###### Header 6
 
+Normal content
+
+> Note
+
 Change slide using 3 dashes `---` (no space after the dashes)
-
-
-
 
 ---
 # Text Formatting
@@ -97,6 +98,7 @@ Change slide using 3 dashes `---` (no space after the dashes)
 - `*italic*` &nbsp; *italic*
 - `**bold**` &nbsp; **bold**
 
+Using the assign operator within the text (`<-`) Will not show ligatures (<-).
 
 ---
 # Text Formatting
@@ -115,15 +117,16 @@ Change slide using 3 dashes `---` (no space after the dashes)
 - `![:faic](arrow-left)` &nbsp; ![:faic](arrow-left)
 - See [FontAwesome cheatsheet](https://fontawesome.com/v4.7.0/cheatsheet/)
 
-
 ---
 # Subsection Slide with bullet points
+
+###### Using `*` followed by a space:
 
 * a picture
 * says more
 * than a thousand words
 
-or
+###### Using `-` followed by a space:
 
 - a picture
 - says more

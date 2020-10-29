@@ -4,8 +4,10 @@
     <title>Template for the QCBS R Workshop Series</title>
     <meta charset="utf-8" />
     <meta name="author" content="Québec Centre for Biodiversity Science" />
-    <script src="assets/header-attrs-2.4/header-attrs.js"></script>
+    <script src="assets/header-attrs-2.5/header-attrs.js"></script>
     <link href="assets/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="assets/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+    <script src="assets/anchor-sections-1.0/anchor-sections.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
     <link rel="stylesheet" href="qcbsR.css" type="text/css" />
@@ -76,7 +78,7 @@ class: inverse, center, middle
 
 # Headers 1 (with a blue background)
 
-## Header 2 (similar to h1 with no background)
+## Header 2 (similar to `h1` with no blue background)
 
 ### Header 3
 
@@ -86,10 +88,11 @@ class: inverse, center, middle
 
 ###### Header 6
 
+Normal content
+
+&gt; Note
+
 Change slide using 3 dashes `---` (no space after the dashes)
-
-
-
 
 ---
 # Text Formatting
@@ -106,6 +109,7 @@ Change slide using 3 dashes `---` (no space after the dashes)
 - `*italic*` &amp;nbsp; *italic*
 - `**bold**` &amp;nbsp; **bold**
 
+Using the assign operator within the text (`&lt;-`) Will not show ligatures (&lt;-).
 
 ---
 # Text Formatting
@@ -124,15 +128,16 @@ Change slide using 3 dashes `---` (no space after the dashes)
 - `![:faic](arrow-left)` &amp;nbsp; ![:faic](arrow-left)
 - See [FontAwesome cheatsheet](https://fontawesome.com/v4.7.0/cheatsheet/)
 
-
 ---
 # Subsection Slide with bullet points
+
+###### Using `*` followed by a space:
 
 * a picture
 * says more
 * than a thousand words
 
-or
+###### Using `-` followed by a space:
 
 - a picture
 - says more
@@ -419,8 +424,6 @@ To see these shortcuts during a presentation, press **h** or **?**
 .center[![:scale 75%](images/shortcuts.png)]
 
 ---
-exclude: true
-
 # Classes
 
 You may use classes to change the structure of your slide

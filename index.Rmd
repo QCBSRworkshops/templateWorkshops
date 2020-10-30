@@ -98,7 +98,7 @@ Change slide using 3 dashes `---` (no space after the dashes)
 - `*italic*` &nbsp; *italic*
 - `**bold**` &nbsp; **bold**
 
-Using the assign operator within the text (`<-`) Will not show ligatures (<-).
+Using the assign operator within the text (`<-`) will not show ligatures (<-).
 
 ---
 # Text Formatting
@@ -347,7 +347,7 @@ plot(cars)
 
 With `echo = -1`:
 ```{r, echo=-1, fig.width=7, fig.height=3.5}
-par(mfrow=c(1,2), mar = c(4,4,0,1))
+par(mfrow = c(1,2), mar = c(4, 4, 0, 1))
 plot(pressure)
 plot(cars)
 ```

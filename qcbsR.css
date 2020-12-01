@@ -232,6 +232,31 @@ a:hover {
   padding-left: 0rem ;
 }
 
+.pull-left3 {
+  float: left;
+  width: 57%;
+}
+.pull-right3 {
+  float: right;
+  width: 38%;
+}
+
+.pull-right3, .pull-right3 p {
+  padding-left: 0rem ;
+}
+
+.left-code {
+  color: #777;
+  width: 57%;
+  height: 92%;
+  float: left;
+}
+.right-plot {
+  width: 38%;
+  float: right;
+  padding-left: 1%;
+}
+
 /* Blockquote */
 .remark-slide-content blockquote {
   font-size: 1em;

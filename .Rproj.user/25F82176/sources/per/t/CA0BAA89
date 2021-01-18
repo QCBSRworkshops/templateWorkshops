@@ -1,0 +1,26 @@
+{
+    "id": "CA0BAA89",
+    "path": "~/GitHub/QCBSRworkshops/templateWorkshops/index.Rmd",
+    "project_path": "index.Rmd",
+    "type": "r_markdown",
+    "hash": "1894890788",
+    "contents": "",
+    "dirty": false,
+    "created": 1603314757921.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "92,19",
+        "scrollLine": "66"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1604073179,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1604073179466,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,64 @@
+#create data
+sample.m <- matrix(data = seq(1, 20, by = 1), 
+                   nrow = 5, 
+                   ncol = 4)
+
+t.sample <- rnorm(5, 
+                  mean = 5.0, 
+                  sd = 1)
+
+solution <- data.frame(sample.m)
+# c = 1
+# r = 2
+# t = 2
+
+sample.m; t.sample; solution
+
+for(c in 1:ncol(sample.m)){
+  for(r in 1:nrow(sample.m)){
+    for(t in 1:length(t.sample)){
+      solution[r, c] <- sample.m[r, c] + t.sample[t]
+      print(t.sample[t])
+      print(sample.m)
+      print(solution)
+    }
+  }
+}
+
+
+
+
+
+sample.m[c, r] + 1
+
+
+
+
+for (c in 1:ncol(sample.m)){
+  for (r in 1:nrow(sample.m)){
+    print(paste("Row", r, "in column", c, "have values of", sample.m[r,c]))
+    for (t in 1:t.sample){
+      print(paste("The temperature value", t, "is associated to row", r, "of column", c, "which has a value of", sample.m[r,c]))
+      equation <- (t - t.sample)/2
+      solution <- rbind(solution, data.frame(equation))
+    }
+  }
+}
+
+t.sample
+sample.m
+data.frame(sample.m)
+solution[c, r] 
+solution[c, r] 
+solution
+solution[c, r] <- solution[c, r] + 1
+solution[c, r] + 1
+solution[c, r]
+solution
+c
+r
+solution[c, r] <- sample.m[c, r] + 1
+solution
+
+sample.m[c, r] + 1
+solution

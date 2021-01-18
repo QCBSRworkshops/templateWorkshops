@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Template for the QCBS R Workshop Series</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Québec Centre for Biodiversity Science" />
+    <link href="assets/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+    <link rel="stylesheet" href="qcbsR.css" type="text/css" />
+    <link rel="stylesheet" href="qcbsR-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Template for the QCBS R Workshop Series
+## <hr>
+### Québec Centre for Biodiversity Science
+
+---
+
+
+
+# R Markdown
+
+&lt;br&gt;
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;http://rmarkdown.rstudio.com&gt;.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+
+---
+# Theme `xaringan`
+
+&lt;br&gt;
+
+Install the `xaringan` package from the [CRAN](https://cran.r-project.org/web/packages/xaringan/index.html):
+
+
+```r
+install.packages("yihui/xaringan")
+```
+---
+# Setup for your presentation
+
+&lt;br&gt;
+
+
+```r
+knitr::opts_chunk$set(
+  comment = "#",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.width=6, fig.height=6,
+  fig.retina = 3,
+  fig.align = 'center'
+)
+
+options(repos=structure(c(CRAN="http://cran.r-project.org")))
+```
+
+---
+class: inverse, center, middle
+
+# Section slide
+
+&lt;hr&gt;
+
+## with a nice subtitle
+
+---
+
+# Headers 1 (with a blue background)
+
+## Header 2 (similar to `h1` with no blue background)
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
+
+Normal content
+
+&gt; Note
+
+Change slide using 3 dashes `---` (no space after the dashes)
+
+---
+# Text Formatting
+
+### Text sizes
+
+- normal size ( `\(\LaTeX\)`-friendly terms)
+- `.huge[huge]` &amp;nbsp; .huge[huge]
+- `.xlarge[xlarge]` &amp;nbsp; .xlarge[xlarge]
+- `.large[large]` &amp;nbsp; .large[large]
+- `.small[small]` &amp;nbsp; .small[small]
+- `.xsmall[xsmall]` &amp;nbsp; .xsmall[xsmall]
+- `.tiny[tiny]` &amp;nbsp; .tiny[tiny]
+- `*italic*` &amp;nbsp; *italic*
+- `**bold**` &amp;nbsp; **bold**
+
+Using the assign operator within the text (`&lt;-`) will not show ligatures (&lt;-).
+
+---
+# Text Formatting
+
+### Special class
+
+- `.alert[alert]` .alert[alert]
+- `.comment[comment]` .comment[comment]
+- `[link](https://github.com/QCBSRworkshops/templateWorkshops)` [link](https://github.com/QCBSRworkshops/templateWorkshops)
+- use back-ticks for `inline code` that can also includes [`links`](https://rmarkdown.rstudio.com/lesson-4.html)
+
+### Custom remarkjs's macros
+
+- `![:scale 40%](path/to/img.png)` to scale an image
+- `![:faic](arrow-right)` &amp;nbsp; ![:faic](arrow-right)
+- `![:faic](arrow-left)` &amp;nbsp; ![:faic](arrow-left)
+- See [FontAwesome cheatsheet](https://fontawesome.com/v4.7.0/cheatsheet/)
+
+---
+# Subsection Slide with bullet points
+
+###### Using `*` followed by a space:
+
+* a picture
+* says more
+* than a thousand words
+
+###### Using `-` followed by a space:
+
+- a picture
+- says more
+- than a thousand words
+
+---
+# Vertical Slide with bullet points
+
+- Level 1 item
+  * Level 2 item
+  * Level 2 item
+- Level 1 item
+
+
+---
+# Subsection Slide with ordered items
+
+1. item 1
+1. item 2
+
+or
+
+1. item 1
+2. item 2
+
+---
+# Vertical Slide with incremental bullets
+
+&lt;br&gt;
+
+The easiest way to build incremental slides is...
+
+--
+
+to use **two dashes** `--` to separate content on a slide, and even bullet points:
+
+
+--
+
+- Bullet 1
+--
+
+- Bullet 2
+--
+
+- Bullet 3
+
+
+&lt;br&gt;
+
+And whenever you feel like a line break is needed, simply use `&lt;br&gt;`!
+
+
+---
+# Vertical Slide with Two Columns
+
+.pull-left[
+- You can place 2 figures on a slide
+- Or 2 columns of text
+- Using `.pull-left[]` for the first column
+]
+
+
+.pull-right[
+- You can place 2 figures on a slide
+- Or 2 columns of text
+- Using `.pull-right[]` for the second column
+]
+
+---
+# Table
+
+Colons can be used to align columns.
+
+&lt;br&gt;
+
+| Tables        | Are           | Cool          |
+| ------------- |:-------------:| -------------:|
+| right-aligned | centered      | right-aligned |
+| stuff         | stuff         | 123           |
+| stuff         | stuff         | 456           |
+
+
+---
+# Text alignment
+
+&lt;br&gt;
+
+.left[
+`.left[Left-aligned text]`
+]
+
+&lt;br&gt;
+
+.center[
+`.center[Centered text]`
+]
+
+&lt;br&gt;
+
+.right[
+`.right[Right-aligned text]`
+]
+
+---
+class: inverse, center, middle
+
+background-image: url(https://tailandfur.com//wp-content/uploads/2014/09/beautiful-and-cute-animals-wallpaper-9.jpg)
+background-size: contain
+
+# Include images
+
+
+---
+# Images
+
+This image is centered and scaled to 60% of its real size, using:
+
+`.center[ ![:scale 60%](url link to zebra image) ]`
+
+or
+
+`.center[ ![:scale 60%](path/to/image/folder) ]`
+
+.center[
+![:scale 60%](https://tailandfur.com//wp-content/uploads/2014/09/beautiful-and-cute-animals-wallpaper-59.jpg)
+]
+
+---
+# Images and text
+
+&lt;br&gt;
+
+.pull-left2[
+Here `.pull-left2[]` and `.pull-right2[]`  are used to create a 2 column slide, where the left column is larger than the right column.
+]
+
+.pull-right2[
+Beautiful picture
+
+![](https://tailandfur.com//wp-content/uploads/2014/09/beautiful-and-cute-animals-wallpaper-57.jpg)
+]
+
+---
+class: inverse, center, middle
+
+# Use R!
+
+&lt;hr&gt;
+
+## Few examples
+
+---
+# Code chunk
+
+You can embed an R code chunk like so:
+
+
+      
+      ```r
+      library(datasets)
+      cars[1:2,]
+      ```
+
+which yields:
+
+
+```r
+library(datasets)
+cars[1:2,]
+#   speed dist
+# 1     4    2
+# 2     4   10
+```
+
+---
+# Including Plots
+
+
+```r
+plot(pressure)
+```
+
+&lt;img src="index_files/figure-html/unnamed-chunk-4-1.png" width="432" style="display: block; margin: auto;" /&gt;
+
+
+---
+# Code chunk options
+&lt;br&gt;
+
+- `echo`:
+  - `echo = TRUE` (default) to include R source code in the output file.
+  - `echo = FALSE` to prevent printing of the R source code.
+  - `echo = c(2:3)` or `-1` to include only line 2 and 3 from the R source code.
+- `eval`:
+  - `eval = TRUE` (default) to evaluate the code chunk.
+  - `eval = FALSE` to prevent evaluating the code chunk.
+  - `eval = c(2:3)` or `-1` to evaluate only line 2 and 3 from the R code.
+
+
+---
+# Code chunk options
+
+&lt;br&gt;
+
+
+- `fig.width`, `fig.height` to define width and height of the resulting plots
+- `fig.align` to align the resulting plots
+
+.alert[See more code chunk options at &lt;https://yihui.name/knitr/options/&gt;]
+
+
+---
+# Including Plots
+
+With `echo = TRUE`:
+
+```r
+par(mfrow=c(1,2), mar = c(4,4,0,1), las = 1)
+plot(pressure)
+plot(cars)
+```
+
+&lt;img src="index_files/figure-html/unnamed-chunk-5-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+
+---
+# Including Plots
+
+With `echo = -1`:
+
+```r
+plot(pressure)
+plot(cars)
+```
+
+&lt;img src="index_files/figure-html/unnamed-chunk-6-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+---
+# Including Plots
+
+
+If the option `highlightLines: true` is used for the presentation (declared in the YAML header), then add `#&lt;&lt;` at the end of the lines to be highlighted.
+
+
+```r
+par(mfrow=c(1,2), mar = c(4,4,0,1), las = 1)
+*plot(pressure)
+*plot(cars)
+```
+
+&lt;img src="index_files/figure-html/unnamed-chunk-7-1.png" width="504" style="display: block; margin: auto;" /&gt;
+
+---
+# Challenge slide! ![:cube]()
+
+To include the Rubik's cube in the challenge slide, you just need to type `![:cube]()` next to the slide title!
+
+
+---
+# Math - use `$`
+
+You can write `\(\LaTeX\)` math expressions inside a pair of dollar signs, e.g. `$\alpha+\beta$` renders `\(\alpha+\beta\)`.
+
+You can use the display style with a pair of double dollar signs `$$` :
+
+`$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$`
+
+
+---
+class: inverse, center, middle
+
+# Keyboard shortcuts
+
+&lt;hr&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+---
+# Keyboard shortcuts
+
+To see these shortcuts during a presentation, press **h** or **?**
+
+.center[![:scale 75%](images/shortcuts.png)]
+
+---
+# Classes
+
+You may use classes to change the structure of your slide
+
+```
+---
+exclude: true
+class: inverse, center, middle
+
+Content goes here
+---
+```
+
+You may hide slides by applying
+
+---
+
+# Questions? Comments? Suggestions?
+
+&lt;br&gt;
+
+##### Use the GitHub repository
+
+###### ![:faic](github) &lt;https://github.com/QCBSRworkshops/&gt;
+
+&lt;br&gt;
+
+##### or contact the coordinators of the QCBS R Workshop Series
+
+###### ![:faic](envelope) [Current coordinators](https://wiki.qcbs.ca/r#questions)
+
+&lt;br&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;br&gt;
+
+This template has been originally developed by [Marie Hélène Brice](mailto:) and [Kevin Cazelles](mailto:). 
+See [here](https://github.com/QCBSRworkshops/templateWorkshops/graphs/contributors) to find all contributors and developers of this template. 
+---
+class: inverse, center, bottom
+
+# Thank you for your implication!
+
+&lt;hr&gt;
+
+![:scale 50%](images/qcbs_logo.png)
+
+&lt;br&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="qcbsR-macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

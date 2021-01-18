@@ -1,14 +1,38 @@
-# History files
-.Rhistory
-.Rapp.history
+# do not upload pdf files nor R scripts pres
+workshop[0-1][0-9]-[ef][nr].pdf
+workshop[0-1][0-9]-[ef][nr].R
 
-# Session Data files
-.RData
+assets
+*.html
+*_files
+public/
+templateWorkshops-master/
+master.zip
 
+# Bookdown files
+**/_book/
+**/_bookdown_files/
+**/libs/
 
+# qcbsR*
+!qcbsR-header.html
+!**/mathjax_header.html
+
+## Apple OS generated files
 .DS_Store
 
-!*qcbsR-header.html
+# R and RStudio specific files
+## History files
+.Rhistory
+.Rapp.history
+.Ruserdata
+*_cache/
+
+# R Session files
+.RData
+
+# RStudio files
+.Rproj.user/
 
 # Example code in package build process
 *-Ex.R
@@ -18,9 +42,6 @@
 
 # Output files from R CMD check
 /*.Rcheck/
-
-# RStudio files
-.Rproj.user/
 
 # produced vignettes
 vignettes/*.html

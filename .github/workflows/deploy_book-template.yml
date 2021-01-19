@@ -75,6 +75,8 @@ jobs:
           TARGET_FOLDER: book-template # The folder the action should deploy
           CLEAN: true
 
+# Trigger action
+
   ping-pong:
     runs-on: ubuntu-latest
     needs: checkout-and-deploy-book-template

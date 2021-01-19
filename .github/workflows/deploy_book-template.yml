@@ -77,6 +77,7 @@ jobs:
           CLEAN: true
 
 # Dispatch a ping to the workshop06 repository that will be received by a workflow, which in turn, will trigger the other workflows
+# Transform into a matrix to add all workshops
 
   dispatch-to-workshops:
     name: Dispatch changes to workshop repositories

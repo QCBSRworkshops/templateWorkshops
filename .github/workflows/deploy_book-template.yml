@@ -2,6 +2,7 @@ on:
   push:
      branches:
        - master
+  repository_dispatch:
 
 name: render-book-template
 

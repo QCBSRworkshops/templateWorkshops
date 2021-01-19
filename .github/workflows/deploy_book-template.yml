@@ -74,9 +74,10 @@ jobs:
           FOLDER: book-template/_book/
           TARGET_FOLDER: book-template # The folder the action should deploy
           CLEAN: true
-          
+
   ping-pong:
     runs-on: ubuntu-latest
+    needs: checkout-and-deploy-book-template
     steps:
       - name: PING - Dispatch initiating repository event
         if: github.event.action != 'pong'

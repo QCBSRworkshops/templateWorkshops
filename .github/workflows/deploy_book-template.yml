@@ -38,7 +38,8 @@ jobs:
       - name: Render the book using bookdown
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
         
-      - uses: actions/upload-artifact@v1
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
         with:
           name: book-template
           path: book-template/

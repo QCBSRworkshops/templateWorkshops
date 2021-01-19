@@ -2,7 +2,6 @@ on:
   push:
      branches:
        - master
-  repository_dispatch:
 
 name: render-book-template
 
@@ -77,15 +76,16 @@ jobs:
           TARGET_FOLDER: book-template # The folder the action should deploy
           CLEAN: true
 
-# Dispatch a ping to the workshop06 repository that will trigger the workflows
+# Dispatch a ping to the workshop06 repository that will be received by a workflow, which in turn, will trigger the other workflows
 
-  ping-pong:
+  dispatch-to-workshops:
+    name: Dispatch changes to workshop repositories
     runs-on: ubuntu-latest
     needs: checkout-and-deploy-book-template
     steps:
-      - name: PING - Dispatch initiating repository event
+      - name: PING BOOK - Dispatch initiating repository event to the workshop receiving workflow
         run: |
           curl -X POST https://api.github.com/repos/QCBSRworkshops/workshop06/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \
           -u ${{ secrets.ACCESS_TOKEN }} \
-          --data '{"event_type": "ping", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
+          --data '{"event_type": "ping_book", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'

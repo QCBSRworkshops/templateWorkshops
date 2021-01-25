@@ -46,7 +46,7 @@ jobs:
 # See https://pkgdown.r-lib.org/reference/deploy_site_github.html
 # and also add secrets for a ACCESS_TOKEN to the repository
 
-  checkout-and-deploy:
+  checkout-and-deploy-presentation-template:
    runs-on: ubuntu-latest
    needs: render-presentation-template
    
@@ -79,9 +79,9 @@ jobs:
   dispatch-to-workshops:
     name: Dispatch changes to workshop repositories
     runs-on: ubuntu-latest
-    needs: checkout-and-deploy-book-template
+    needs: checkout-and-deploy-presentation-template
     steps:
-      - name: PING BOOK - Dispatch initiating repository event to the workshop receiving workflow
+      - name: PING PRESENTATION - Dispatch initiating repository event to the workshop receiving workflow
         run: |
           curl -X POST https://api.github.com/repos/QCBSRworkshops/workshop06/dispatches \
           -H 'Accept: application/vnd.github.everest-preview+json' \

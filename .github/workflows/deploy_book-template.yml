@@ -2,6 +2,8 @@ on:
   push:
      branches:
        - master
+     paths:
+       - book-template/**
 
 name: render-book-template
 

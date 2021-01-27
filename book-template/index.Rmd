@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
+title: "Workshop X: Title"
+author: "QCBS R Workshop Series"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book

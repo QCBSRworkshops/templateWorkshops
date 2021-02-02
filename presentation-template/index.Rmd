@@ -27,19 +27,57 @@ When you click the **Knit** button a document will be generated that includes bo
 New changes coming soon!
 
 ---
-# Theme `xaringan`
+# Using the `xaringan` presentation theme
 
 <br>
 
-Install the `xaringan` package from the [CRAN](https://cran.r-project.org/web/packages/xaringan/index.html):
+This template has been customized using the base from the `xaringan` package. To install it from the [CRAN](https://cran.r-project.org/web/packages/xaringan/index.html), do the following:
 
 ```{r, eval = FALSE}
-install.packages("yihui/xaringan")
+install.packages("xaringan")
 ```
----
-# Setup for your presentation
 
-<br>
+You may also install its developmental version from their Github repository:
+
+```{r, eval = FALSE}
+devtools::install_github("yihui/xaringan")
+```
+
+---
+# Setup the YAML
+
+.small[
+The standard YAML for this presentation follows as below:
+
+
+```{r, eval = FALSE}
+---
+title: "Template guide for the QCBS R Workshop Series"
+subtitle: "<hr>"
+author: "Québec Centre for Biodiversity Science"
+output:
+  xaringan::moon_reader:
+    includes:
+      in_header: "qcbsR-header.html"
+    lib_dir: assets
+    seal: true
+    css: ["default", "qcbsR.css", "qcbsR-fonts.css"]
+    nature:
+      beforeInit: "qcbsR-macros.js"
+      highlightStyle: github
+      highlightLines: true
+---
+```
+
+> Remember that any changes to the `CSS` must be made within the repository of this template, and not within the repositories of the workshops.
+
+> If you feel that something must be changed, contact one of the coordinators.
+]
+---
+
+# Setting the global settings
+
+Global options for the presentation are set within a hidden chunk within the first slide, right after the YAML. 
 
 ```{r setup, echo = TRUE}
 knitr::opts_chunk$set(
@@ -52,19 +90,37 @@ knitr::opts_chunk$set(
   fig.align = 'center'
 )
 
-options(repos=structure(c(CRAN="http://cran.r-project.org")))
+options(repos = structure(c(CRAN = "http://cran.r-project.org")))
 ```
+
+---
+
+# Creating new slides
+
+New slides are separated by `---`. 
+
+You may also incrementally add content to a slide using `--`
+
+--
+
+Like this.
+
+--
+
+And this.
 
 ---
 class: inverse, center, middle
 
-# Section slide
+# This is a section slide
 
-<hr>
-
-## with a nice subtitle
-
+## with a subtitle
 ---
+
+# Headers
+
+You can use from `#` to `######` to set headers, corresponding to `.h1` to `.h6` within the `CSS` document.
+<br>
 
 # Headers 1 (with a blue background)
 
@@ -78,40 +134,41 @@ class: inverse, center, middle
 
 ###### Header 6
 
-Normal content
-
-> Note
-
-Change slide using 3 dashes `---` (no space after the dashes)
-
 ---
 # Text Formatting
 
-### Text sizes
+Slide content can be manipulated using the variables defined within the `CSS` document, as well as standard `markdown` terms.
 
-- normal size ( $\LaTeX$-friendly terms)
+.pull-left[
 - `.huge[huge]` &nbsp; .huge[huge]
 - `.xlarge[xlarge]` &nbsp; .xlarge[xlarge]
 - `.large[large]` &nbsp; .large[large]
 - `.small[small]` &nbsp; .small[small]
 - `.xsmall[xsmall]` &nbsp; .xsmall[xsmall]
 - `.tiny[tiny]` &nbsp; .tiny[tiny]
+- `.alert[alert]` .alert[alert]
+- `.comment[comment]` .comment[comment]
+]
+
+.pull-right[
+- Normal text 
+- `$\LaTeX$` $\LaTeX$-friendly terms
 - `*italic*` &nbsp; *italic*
 - `**bold**` &nbsp; **bold**
+- `[]()` allows for [links]()
+]
 
-Using the assign operator within the text (`<-`) will not show ligatures (<-).
+<br>
 
 ---
 # Text Formatting
 
-### Special class
+### Special classes
 
-- `.alert[alert]` .alert[alert]
-- `.comment[comment]` .comment[comment]
-- `[link](https://github.com/QCBSRworkshops/templateWorkshops)` [link](https://github.com/QCBSRworkshops/templateWorkshops)
-- use back-ticks for `inline code` that can also includes [`links`](https://rmarkdown.rstudio.com/lesson-4.html)
+Using the assign operator within the text(`<-`) will not show ligatures (<-).
 
-### Custom remarkjs's macros
+
+### Custom `remarkjs`'s macros
 
 - `![:scale 40%](path/to/img.png)` to scale an image
 - `![:faic](arrow-right)` &nbsp; ![:faic](arrow-right)

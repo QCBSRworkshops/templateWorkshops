@@ -10,9 +10,11 @@ output:
     seal: true
     css: ["default", "qcbsR.css", "qcbsR-fonts.css"]
     nature:
+      ratio: '4:3'      
       beforeInit: "qcbsR-macros.js"
       highlightStyle: github
       highlightLines: true
+      countIncrementalSlides: false
 ---
 
 
@@ -666,29 +668,29 @@ Content goes here
 You may hide slides by applying
 
 ---
-
-# Questions? Comments? Suggestions?
-
-<br>
-
-##### Use the GitHub repository
-
-###### ![:faic](github) <https://github.com/QCBSRworkshops/>
+.pull-left[
+.center[
+##### Contributing
+If you have any comments and suggestions, please go to the [QCBSRworkshops/templateRepository ![:faic](github)](https://github.com/QCBSRworkshops/templateRepository) Github repository for this template.
 
 <br>
 
-##### or contact the coordinators of the QCBS R Workshop Series
+You may also contact the [![:faic](envelope) current coordinators](https://wiki.qcbs.ca/r#questions) of the QCBS R Workshop Series.
 
-###### ![:faic](envelope) [Current coordinators](https://wiki.qcbs.ca/r#questions)
+]
+]
 
-<br>
-
-<br><br>
-
-<br>
+.pull-right[
+##### Developers and contributors
 
 This template has been originally developed by [Marie Hélène Brice](mailto:) and [Kevin Cazelles](mailto:). 
-See [here](https://github.com/QCBSRworkshops/templateWorkshops/graphs/contributors) to find all contributors and developers of this template. 
+
+[Pedro H. P. Braga](mailto:) has changed this presentation, the CSS and the JS files to add more clarification and flexibility.
+
+See [here and below](https://github.com/QCBSRworkshops/templateWorkshops/graphs/contributors) to find all contributors and developers of this template.
+]
+
+.footnote[.center[[This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. ![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/deed.fr)]]
 ---
 class: inverse, center, bottom
 

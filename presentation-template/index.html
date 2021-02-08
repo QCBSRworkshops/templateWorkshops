@@ -692,29 +692,29 @@ Content goes here
 You may hide slides by applying
 
 ---
-
-# Questions? Comments? Suggestions?
-
-&lt;br&gt;
-
-##### Use the GitHub repository
-
-###### ![:faic](github) &lt;https://github.com/QCBSRworkshops/&gt;
+.pull-left[
+.center[
+##### Contributing
+If you have any comments and suggestions, please go to the [QCBSRworkshops/templateRepository ![:faic](github)](https://github.com/QCBSRworkshops/templateRepository) Github repository for this template.
 
 &lt;br&gt;
 
-##### or contact the coordinators of the QCBS R Workshop Series
+You may also contact the [![:faic](envelope) current coordinators](https://wiki.qcbs.ca/r#questions) of the QCBS R Workshop Series.
 
-###### ![:faic](envelope) [Current coordinators](https://wiki.qcbs.ca/r#questions)
+]
+]
 
-&lt;br&gt;
-
-&lt;br&gt;&lt;br&gt;
-
-&lt;br&gt;
+.pull-right[
+##### Developers and contributors
 
 This template has been originally developed by [Marie Hélène Brice](mailto:) and [Kevin Cazelles](mailto:). 
-See [here](https://github.com/QCBSRworkshops/templateWorkshops/graphs/contributors) to find all contributors and developers of this template. 
+
+[Pedro H. P. Braga](mailto:) has changed this presentation, the CSS and the JS files to add more clarification and flexibility.
+
+See [here and below](https://github.com/QCBSRworkshops/templateWorkshops/graphs/contributors) to find all contributors and developers of this template.
+]
+
+.footnote[.center[[This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. ![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/deed.fr)]]
 ---
 class: inverse, center, bottom
 
@@ -730,8 +730,10 @@ class: inverse, center, bottom
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script src="qcbsR-macros.js"></script>
 <script>var slideshow = remark.create({
+"ratio": "4:3",
 "highlightStyle": "github",
-"highlightLines": true
+"highlightLines": true,
+"countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

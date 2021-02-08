@@ -16,6 +16,14 @@ Always consult the [presenter and developer protocol]() before applying or reque
 
 Note that any changes pushed to this repository will trigger (*still being implemented*) the Github Actions of all other workshop repositories to be re-run.
 
+
+# Development status
+
+Template | Slides 
+:------- | :----- 
+Presentation     | [![render-presentation-template](https://github.com/QCBSRworkshops/templateWorkshops/workflows/render-presentation-template/badge.svg)](https://github.com/QCBSRworkshops/templateWorkshops/actions?query=workflow%3Arender-presentation-template)
+Book  | [![render-book-template](https://github.com/QCBSRworkshops/templateWorkshops/workflows/render-book-template/badge.svg)](https://github.com/QCBSRworkshops/templateWorkshops/actions?query=workflow%3Arender-book-template)
+
 ### Version control
 
 *Under construction*

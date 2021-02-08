@@ -295,7 +295,7 @@ Here. (This is preceded by two `<br>` separated by returns.)
 ---
 # Columns
 
-Multiple column types are within the CSS. 
+Multiple column types are within the CSS.
 
 They are variations of `.pull-left[]`, to bring the content to the left side, and `.pull-right[]` to bring the content to the right. 
 
@@ -307,6 +307,7 @@ Standard `.pull-left[]` has 47% width.
 ``` 
 Code chunk example
 ```
+
 ]
 
 .pull-right[
@@ -315,6 +316,7 @@ Standard `.pull-right[]` has 48% width.
 ``` 
 Code chunk example
 ```
+
 ]
 
 
@@ -325,6 +327,7 @@ has 67% width, with the text going further to the right.
 ``` 
 Code chunk example
 ```
+
 ]
 
 
@@ -334,6 +337,7 @@ Code chunk example
 ``` 
 Code chunk example
 ```
+
 ]
 
 
@@ -344,15 +348,17 @@ has 57% width, with the text going further to the right.
 ``` 
 Code chunk example
 ```
+
 ]
 
 
 .pull-right3[
-`.pull-right3[]` has 40% width.
+`.pull-right3[]` has 40% width and it should work.
 
 ``` 
 Code chunk example
 ```
+
 ]
 
 ---
@@ -365,49 +371,66 @@ They are variations of `.pull-left[]`, to bring the content to the left side, an
 **Examples**
 
 .left-code[
+
 Special `.left-code[]` has 57% width and a few colour changes.
 
 ``` 
 Code chunk example
 ```
+
 ]
 
 .right-plot[
+
 Special `.right-plot[]` has 38% width.
 
+You can write a lot of text here and, because `.left-code[]` has `height: 92%;`, text will not overflow to the left side. 
+
 ``` 
-Code chunk example
+Code 
+
+chunk 
+
+example
 ```
 ]
 
-<br>
+---
+# Columns
 
-<br>
+Multiple column types are within the CSS. 
 
-<br>
+They are variations of `.pull-left[]`, to bring the content to the left side, and `.pull-right[]` to bring the content to the right. 
+
+**Examples**
 
 .pull-left4[
+
 `.pull-left4[]` 
-has 37% width, giving more space to the right column.
+has just 37% width.
 
 ``` 
 Code chunk example
 ```
+
 ]
 
 
 .pull-right4[
+
 `.pull-right4[]` has 60% width, taking more control of the screen.
 
 ``` 
 Code chunk example
 ```
+
 ]
 
 ---
 # Tables
 
 Tables can be created using the following scheme, or knitr kables!
+
 
 ```
 
@@ -622,7 +645,7 @@ class: inverse, center, middle
 ---
 # Keyboard shortcuts
 
-To see these shortcuts during a presentation, press **h** or **?**
+To see these shortcuts during a presentation, press **H** or **?**
 
 .center[![:scale 75%](images/shortcuts.png)]
 

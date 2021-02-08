@@ -1,5 +1,5 @@
 ---
-title: "Template guide for the QCBS R Workshop Series"
+title: "Template guide for the<br> QCBS R Workshop Series"
 subtitle: "<hr>"
 author: "Québec Centre for Biodiversity Science"
 output:
@@ -16,7 +16,7 @@ output:
 ---
 
 
-# R Markdown
+# (R) Markdown
 
 <br>
 
@@ -24,7 +24,11 @@ This is an `R` Markdown document. Markdown is a simple formatting syntax for aut
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
 
+
+
 New changes coming soon!
+
+
 
 ---
 # Using the `xaringan` presentation theme
@@ -68,11 +72,10 @@ output:
       highlightLines: true
 ---
 ```
-
-> Remember that any changes to the `CSS` must be made within the repository of this template, and not within the repositories of the workshops.
-
-> If you feel that something must be changed, contact one of the coordinators.
 ]
+
+.footnote[Remember that any changes to the `CSS` must be made within the repository of this template, and not within the repositories of the workshops.If you feel that something must be changed, contact one of the coordinators.]
+
 ---
 
 # Setting the global settings
@@ -99,7 +102,7 @@ options(repos = structure(c(CRAN = "http://cran.r-project.org")))
 
 New slides are separated by `---`. 
 
-You may also incrementally add content to a slide using `--`
+You may also incrementally add content to a slide using `--`.
 
 --
 
@@ -120,9 +123,10 @@ class: inverse, center, middle
 # Headers
 
 You can use from `#` to `######` to set headers, corresponding to `.h1` to `.h6` within the `CSS` document.
+
 <br>
 
-# Headers 1 (with a blue background)
+# Headers 1 (with a blue background) `h1`
 
 ## Header 2 (similar to `h1` with no blue background)
 
@@ -151,33 +155,71 @@ Slide content can be manipulated using the variables defined within the `CSS` do
 ]
 
 .pull-right[
-- Normal text 
+- This is normal text.
+- This is `in-line code`.
 - `$\LaTeX$` $\LaTeX$-friendly terms
 - `*italic*` &nbsp; *italic*
 - `**bold**` &nbsp; **bold**
 - `[]()` allows for [links]()
+- This is [`in-line hyperlink`]().
 ]
-
 <br>
 
+```
+This is 
+a code chunk.
+
+```
+
+.footnote[.small[This is a small footnote done with a nested `.footnote[.small[]]`.]]
 ---
 # Text Formatting
 
-### Special classes
-
-Using the assign operator within the text(`<-`) will not show ligatures (<-).
-
-
 ### Custom `remarkjs`'s macros
 
+###### Scaling images
+
 - `![:scale 40%](path/to/img.png)` to scale an image
+
+<br>
+
+###### Using FontAwesome v4.7.0 icons
+.pull-left[
+.small[
+
+- `![:faic](long-arrow-right)` &nbsp; ![:faic](long-arrow-right)
+- `![:faic](long-arrow-left)` &nbsp; ![:faic](long-arrow-left)
 - `![:faic](arrow-right)` &nbsp; ![:faic](arrow-right)
 - `![:faic](arrow-left)` &nbsp; ![:faic](arrow-left)
-- See [FontAwesome cheatsheet](https://fontawesome.com/v4.7.0/cheatsheet/)
+]
+]
+
+.pull-right[
+See [FontAwesome cheatsheet](https://fontawesome.com/v4.7.0/cheatsheet/)
+
+
+<br>
+
+<br>
+
+<br>
+]
+
+
+Behind the scenes:
+
+```js
+// Font-awesome icons (version 4.7)
+remark.macros.faic = function (size = 1.5) {
+  var name = this;
+  return '<i class="fa fa-'+ name + ' fa-'+ size + 'x" aria-hidden="true"></i>';
+};
+```
 
 ---
-# Subsection Slide with bullet points
+# Slide with bullet points
 
+.pull-left[
 ###### Using `*` followed by a space:
 
 * a picture
@@ -190,28 +232,36 @@ Using the assign operator within the text(`<-`) will not show ligatures (<-).
 - says more
 - than a thousand words
 
----
-# Vertical Slide with bullet points
+###### Using `-` or `*` followed by two spaces:
 
 - Level 1 item
   * Level 2 item
   * Level 2 item
 - Level 1 item
 
+]
 
----
-# Subsection Slide with ordered items
+.pull-right[
+###### Using numbers followed by `.` and a space:
 
 1. item 1
 1. item 2
+1. item 3
+2. item 4
+4. item 5
 
-or
+<br>
+
+###### Using numbers followed by `.` and a space:
 
 1. item 1
+  1. item 2
+  1. item 1
 2. item 2
 
+]
 ---
-# Vertical Slide with incremental bullets
+# Incremental slides and incremental bullets
 
 <br>
 
@@ -219,7 +269,7 @@ The easiest way to build incremental slides is...
 
 --
 
-to use **two dashes** `--` to separate content on a slide, and even bullet points:
+...to use **two dashes** `--` to separate content within a slide, and even bullet points:
 
 
 --
@@ -232,32 +282,144 @@ to use **two dashes** `--` to separate content on a slide, and even bullet point
 
 - Bullet 3
 
+--
+
+And, whenever you feel like a line break is needed, simply use the HTML tag `<br>`.
 
 <br>
 
-And whenever you feel like a line break is needed, simply use `<br>`!
+<br>
 
+Here. (This is preceded by two `<br>` separated by returns.)
 
 ---
-# Vertical Slide with Two Columns
+# Columns
+
+Multiple column types are within the CSS. 
+
+They are variations of `.pull-left[]`, to bring the content to the left side, and `.pull-right[]` to bring the content to the right. 
+
+**Examples**
 
 .pull-left[
-- You can place 2 figures on a slide
-- Or 2 columns of text
-- Using `.pull-left[]` for the first column
+Standard `.pull-left[]` has 47% width.
+
+``` 
+Code chunk example
+```
+]
+
+.pull-right[
+Standard `.pull-right[]` has 48% width.
+
+``` 
+Code chunk example
+```
 ]
 
 
-.pull-right[
-- You can place 2 figures on a slide
-- Or 2 columns of text
-- Using `.pull-right[]` for the second column
+.pull-left2[
+`.pull-left2[]` 
+has 67% width, with the text going further to the right.
+
+``` 
+Code chunk example
+```
+]
+
+
+.pull-right2[
+`.pull-right2[]` has 30% width.
+
+``` 
+Code chunk example
+```
+]
+
+
+.pull-left3[
+`.pull-left3[]` 
+has 57% width, with the text going further to the right.
+
+``` 
+Code chunk example
+```
+]
+
+
+.pull-right3[
+`.pull-right3[]` has 40% width.
+
+``` 
+Code chunk example
+```
 ]
 
 ---
-# Table
+# Columns
 
-Colons can be used to align columns.
+Multiple column types are within the CSS. 
+
+They are variations of `.pull-left[]`, to bring the content to the left side, and `.pull-right[]` to bring the content to the right. 
+
+**Examples**
+
+.left-code[
+Special `.left-code[]` has 57% width and a few colour changes.
+
+``` 
+Code chunk example
+```
+]
+
+.right-plot[
+Special `.right-plot[]` has 38% width.
+
+``` 
+Code chunk example
+```
+]
+
+<br>
+
+<br>
+
+<br>
+
+.pull-left4[
+`.pull-left4[]` 
+has 37% width, giving more space to the right column.
+
+``` 
+Code chunk example
+```
+]
+
+
+.pull-right4[
+`.pull-right4[]` has 60% width, taking more control of the screen.
+
+``` 
+Code chunk example
+```
+]
+
+---
+# Tables
+
+Tables can be created using the following scheme, or knitr kables!
+
+```
+
+| Tables        | Are           | Cool          |
+| ------------- |:-------------:| -------------:|
+| right-aligned | centered      | right-aligned |
+| stuff         | stuff         | 123           |
+| stuff         | stuff         | 456           |
+
+```
+
+<br>
 
 <br>
 
@@ -267,26 +429,25 @@ Colons can be used to align columns.
 | stuff         | stuff         | 123           |
 | stuff         | stuff         | 456           |
 
-
 ---
-# Text alignment
+# Aligning content
 
 <br>
 
 .left[
-`.left[Left-aligned text]`
+`.left[Left-aligned content]`
 ]
 
 <br>
 
 .center[
-`.center[Centered text]`
+`.center[Centered content]`
 ]
 
 <br>
 
 .right[
-`.right[Right-aligned text]`
+`.right[Right-aligned content]`
 ]
 
 ---
@@ -295,19 +456,30 @@ class: inverse, center, middle
 background-image: url(https://tailandfur.com//wp-content/uploads/2014/09/beautiful-and-cute-animals-wallpaper-9.jpg)
 background-size: contain
 
-# Include images
+# Include background images 
 
+#### Using `background-image` and `background-size` when defining the slide `class`.
+
+.left[
+```
+---
+class: inverse, center, middle
+
+background-image: url(https://tailandfur.com//wp-content/uploads/2014/09/beautiful-and-cute-animals-wallpaper-9.jpg)
+background-size: contain
+```
+]
 
 ---
 # Images
 
 This image is centered and scaled to 60% of its real size, using:
 
-`.center[ ![:scale 60%](url link to zebra image) ]`
+`.center[![:scale 60%](url link to zebra image) ]`
 
 or
 
-`.center[ ![:scale 60%](path/to/image/folder) ]`
+`.center[![:scale 60%](path/to/image/folder)]`
 
 .center[
 ![:scale 60%](https://tailandfur.com//wp-content/uploads/2014/09/beautiful-and-cute-animals-wallpaper-59.jpg)
@@ -331,11 +503,11 @@ Beautiful picture
 ---
 class: inverse, center, middle
 
-# Use R!
+# Use `R`
 
 <hr>
 
-## Few examples
+## A few examples
 
 ---
 # Code chunk

@@ -23,8 +23,8 @@ Template | Slides
 Presentation     | [![render-presentation-template](https://github.com/QCBSRworkshops/templateWorkshops/workflows/render-presentation-template/badge.svg)](https://github.com/QCBSRworkshops/templateWorkshops/actions?query=workflow%3Arender-presentation-template)
 Book  | [![render-book-template](https://github.com/QCBSRworkshops/templateWorkshops/workflows/render-book-template/badge.svg)](https://github.com/QCBSRworkshops/templateWorkshops/actions?query=workflow%3Arender-book-template)
 
-### Version control
+## License
 
-*Under construction*
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-- 27/02/2020 :art: major change in the template, inspiration https://insileco.github.io/ResearchDown/#1
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)

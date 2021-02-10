@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Template guide for the QCBS R Workshop Series</title>
+  <title>Chapter 3 Format of the book | Template guide for the QCBS R Workshop Series</title>
   <meta name="description" content="This is the template that the books for all the workshops of the QCBS R Workshop Series will follow." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Template guide for the QCBS R Workshop Series" />
+  <meta property="og:title" content="Chapter 3 Format of the book | Template guide for the QCBS R Workshop Series" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Template guide for the QCBS R Workshop Series" />
+  <meta name="twitter:title" content="Chapter 3 Format of the book | Template guide for the QCBS R Workshop Series" />
   
   <meta name="twitter:description" content="This is the template that the books for all the workshops of the QCBS R Workshop Series will follow." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="basics.html"/>
+<link rel="prev" href="basics.html"/>
+<link rel="next" href="citations-1.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -183,29 +183,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Template guide for the QCBS R Workshop Series</h1>
-<p class="author"><em>Québec Centre for Biodiversity Science</em></p>
-<p class="date"><em>2021-02-10</em></p>
+<div id="format" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Format of the book</h1>
+<p>In development.</p>
+<div id="basic-structure" class="section level2">
+<h2><span class="header-section-number">3.1</span> Basic structure</h2>
+<p>As we make the transition from the QCBS wiki into the bookdown books, the basic idea will be that each <strong>section</strong> of the wiki for each workshop will become its own book <strong>chapter</strong>.</p>
+<p>Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>. The name of the Rmd files should follow this structure: <code>XX-chapter_name.Rmd</code> with <code>XX</code>being the number of the chapter.</p>
 </div>
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>This is a <em>template</em> book written in <strong>Markdown</strong> using the <strong>bookdown</strong> package and based on ‘<a href="https://github.com/rstudio/bookdown-demo">A Minimal Book Example</a>’as well a excerpts and concepts from’<a href="https://github.com/rstudio/bookdown">bookdown: Authoring Books and Technical Documents with R Markdown</a>’.</p>
-<p>Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>. When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.</p>
-<p>New changes coming soon!</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
+<div id="the-index.rmd-file" class="section level2">
+<h2><span class="header-section-number">3.2</span> The <code>index.Rmd</code> file</h2>
+<p>In addition to the chapters, each book contains an <code>index.Rmd</code> file which will automatically be the first chapter of all books and which should contain links to the <a href="https://github.com/QCBSRworkshops/templateWorkshops">GitHub page</a> and <a href="https://qcbsrworkshops.github.io/templateWorkshops/presentation-template/index.html">presentation</a> for its respective workshop. Notice that this file has no number on its file name. When building the book, bookdown automatically uses the <code>index.Rmd</code>file as the first chapter and then follows the numbering of the other files. Take this into account when naming your chapters as your <code>01-chapter_name.Rmd</code> will actually be the second chapter and so on.</p>
+</div>
+<div id="additional-resources-chapter" class="section level2">
+<h2><span class="header-section-number">3.3</span> Additional Resources chapter</h2>
+<p>The books should also contain a final chapter called <code>XX-references.Rmd</code> which will contain any citations that you used and can also contain any additional material and resources if participants wish to obtain more information on the subject. Please refer to Chapter <a href="basics.html#citations">2.5</a> for more information on how create the content of this chapter.</p>
+</div>
+<div id="example" class="section level2 unnumbered">
+<h2>Example</h2>
+<p>For example, the English version of the <a href="https://wiki.qcbs.ca/r_workshop1">wiki</a> for Workshop 1 has 8 sections. So the book would have a total of 10 Rmd files which include the <code>index.Rmd</code> file, 8 <code>XX-chapter_name.Rmd</code> files numbered <code>01 - 08</code>, and the final <code>9-references.Rmd</code>file.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="basics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="citations-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

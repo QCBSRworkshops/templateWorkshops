@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Template guide for the QCBS R Workshop Series</title>
+  <title>Chapter 4 Citations | Template guide for the QCBS R Workshop Series</title>
   <meta name="description" content="This is the template that the books for all the workshops of the QCBS R Workshop Series will follow." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Template guide for the QCBS R Workshop Series" />
+  <meta property="og:title" content="Chapter 4 Citations | Template guide for the QCBS R Workshop Series" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Template guide for the QCBS R Workshop Series" />
+  <meta name="twitter:title" content="Chapter 4 Citations | Template guide for the QCBS R Workshop Series" />
   
   <meta name="twitter:description" content="This is the template that the books for all the workshops of the QCBS R Workshop Series will follow." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="basics.html"/>
+<link rel="prev" href="format.html"/>
+<link rel="next" href="additional-resources.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -183,29 +183,99 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Template guide for the QCBS R Workshop Series</h1>
-<p class="author"><em>Québec Centre for Biodiversity Science</em></p>
-<p class="date"><em>2021-02-10</em></p>
+<div id="citations-1" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Citations</h1>
+<p>In development.</p>
+<p>We already covered the basics on how to insert an inline citation on Chapter <a href="basics.html#basics">2</a>. However, those examples only work for this book because they are the packages we are using to create the book. If we wanted to cite another package or a book/article/etc., we first have to create the bibliography entries of those packages, books, articles, etc.</p>
+<div id="the-bibtex-format" class="section level2">
+<h2><span class="header-section-number">4.1</span> The BibTeX format</h2>
+<p>Bookdown uses <code>pandoc-citeproc</code> for its html output. Many bibliography formats can be used by <code>pandoc-citeproc</code>, but <a href="http://www.bibtex.org/">BibTex</a> is quite simple and relatively standard so we will use it for our books.</p>
+<p>Here is a basic example of a BibTex entry:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="citations-1.html#cb9-1"></a><span class="op">@</span>Book{abramowitz<span class="op">+</span>stegun,</span>
+<span id="cb9-2"><a href="citations-1.html#cb9-2"></a> author    =<span class="st"> &quot;Milton {Abramowitz} and Irene A. {Stegun}&quot;</span>,</span>
+<span id="cb9-3"><a href="citations-1.html#cb9-3"></a> title     =<span class="st"> &quot;Handbook of Mathematical Functions with</span></span>
+<span id="cb9-4"><a href="citations-1.html#cb9-4"></a><span class="st">              Formulas, Graphs, and Mathematical Tables&quot;</span>,</span>
+<span id="cb9-5"><a href="citations-1.html#cb9-5"></a> publisher =<span class="st"> &quot;Dover&quot;</span>,</span>
+<span id="cb9-6"><a href="citations-1.html#cb9-6"></a> year      =<span class="st">  </span><span class="dv">1964</span>,</span>
+<span id="cb9-7"><a href="citations-1.html#cb9-7"></a> address   =<span class="st"> &quot;New York City&quot;</span>,</span>
+<span id="cb9-8"><a href="citations-1.html#cb9-8"></a> edition   =<span class="st"> &quot;ninth Dover printing, tenth GPO printing&quot;</span></span>
+<span id="cb9-9"><a href="citations-1.html#cb9-9"></a>}</span></code></pre></div>
+<p>Now let’s see what the structure of the entry is:</p>
+<ul>
+<li>Each entry starts with a type (e.g. <code>@Book{</code>) such as <code>article</code> or <code>book</code>, among others.</li>
+<li>It is then followed by a citation-key (e.g. <code>abramowitz+stegun,</code>) which can be used to produce the inline citations. So if we wanted to cite our example book we would use <code>@abramowitz+stegun</code> to produce this citation: <span class="citation">Abramowitz and Stegun (<a href="#ref-abramowitz+stegun" role="doc-biblioref">1964</a>)</span>.</li>
+<li>Finally, the entry has multiple tags which give the characteristics of the entry (e.g. author, title, year, etc.)
+<ul>
+<li>There are some required tags for each type of entry as well as some optional ones.</li>
+</ul></li>
+</ul>
+<p>You can find a list of the different types and the required and optional tags for each type <a href="https://en.wikipedia.org/wiki/BibTeX">here</a>.</p>
 </div>
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Introduction</h1>
-<p>This is a <em>template</em> book written in <strong>Markdown</strong> using the <strong>bookdown</strong> package and based on ‘<a href="https://github.com/rstudio/bookdown-demo">A Minimal Book Example</a>’as well a excerpts and concepts from’<a href="https://github.com/rstudio/bookdown">bookdown: Authoring Books and Technical Documents with R Markdown</a>’.</p>
-<p>Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>. When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.</p>
-<p>New changes coming soon!</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="index.html#cb1-2"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="index.html#cb1-3"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
+<div id="creating-a-bibtex-database" class="section level2">
+<h2><span class="header-section-number">4.2</span> Creating a BibTeX database</h2>
+<p>Now that we know the basics about BibTeX, we can apply it. For this, we have to create a BibTeX database which is a plain-text file with a <code>.bib</code> extension. For example, we created an <code>example.bib</code>file so that we could use the <span class="citation">Abramowitz and Stegun (<a href="#ref-abramowitz+stegun" role="doc-biblioref">1964</a>)</span> citation.</p>
+<p>The file name for the database of each workshop should be <code>workshop-X-citations.bib</code>.</p>
+<div id="r-packages" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> R packages</h3>
+<p>If you wish to cite any R packages, <strong>knitr</strong> contains the helper function <code>write_bib()</code> that automatically produces the BibTeX entries for the selected packages and creates a datbase for the packages. Here is an example that this template uses to produce citations such as this one for <strong>bookdown</strong> <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2020</a>)</span>:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="citations-1.html#cb10-1"></a>knitr<span class="op">::</span><span class="kw">write_bib</span>(<span class="kw">c</span>(</span>
+<span id="cb10-2"><a href="citations-1.html#cb10-2"></a>  <span class="kw">.packages</span>(), <span class="st">&#39;bookdown&#39;</span>, <span class="st">&#39;knitr&#39;</span>, <span class="st">&#39;rmarkdown&#39;</span></span>
+<span id="cb10-3"><a href="citations-1.html#cb10-3"></a>), <span class="st">&#39;packages.bib&#39;</span>)</span></code></pre></div>
+</div>
+</div>
+<div id="adding-the-bibtex-database" class="section level2">
+<h2><span class="header-section-number">4.3</span> Adding the BibTeX database</h2>
+<p>To include the database in the book, you must:</p>
+<ul>
+<li>Save the <code>.bib</code> file in the <code>book-en</code> or <code>book-fr</code> folder.</li>
+<li>Add the file name to the <code>bibliography</code> field in the YAML metadata section of the <code>index.Rmd</code> file.
+<ul>
+<li>Multiple database files can be included. For example, the <code>bibliography</code> field of this template looks like this:</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="citations-1.html#cb11-1"></a>bibliography<span class="op">:</span><span class="st"> </span>[packages.bib, example.bib]</span></code></pre></div>
+</div>
+<div id="the-xx-references.rmd-file" class="section level2">
+<h2><span class="header-section-number">4.4</span> The <code>XX-references.Rmd</code> file</h2>
+<p>The basic format of this Rmd file should only contain the following expression:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="citations-1.html#cb12-1"></a><span class="st">`</span><span class="dt">r if (knitr::is_html_output()) &#39;# Additional resources {-}&#39;</span><span class="st">`</span></span>
+<span id="cb12-2"><a href="citations-1.html#cb12-2"></a></span>
+<span id="cb12-3"><a href="citations-1.html#cb12-3"></a><span class="co">### References {-}</span></span></code></pre></div>
+<p>This will output only the references we included in the main BibTeX database (i.e. the <code>workshop-X-citations.bib</code> file) and any packages we cited inside the book.</p>
+<ul>
+<li>Note that this will not include the rest of the package reference entries created by <strong>knitr</strong> if they were not cited inside the book.</li>
+</ul>
+<div id="including-other-resources" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Including other resources</h3>
+<p>Most of the wikis for the QCBS R Workshop Series contain a section at the end where we offer additional resources for the participants interested in more information about the subject of the workshop.</p>
+<p>To include these into this last chapter of the book, you can add a new subsection after the basic expression showed above. In this book, we have included a link to the <strong>bookdown</strong> manual as an additional resource like this:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="citations-1.html#cb13-1"></a><span class="st">`</span><span class="dt">r if (knitr::is_html_output()) &#39;</span></span>
+<span id="cb13-2"><a href="citations-1.html#cb13-2"></a><span class="dt"># Additional resources {-}</span></span>
+<span id="cb13-3"><a href="citations-1.html#cb13-3"></a><span class="dt">&#39;</span><span class="st">`</span></span>
+<span id="cb13-4"><a href="citations-1.html#cb13-4"></a></span>
+<span id="cb13-5"><a href="citations-1.html#cb13-5"></a>For more information on how to use bookdown, you can check the bookdown manual [here](https<span class="op">:</span><span class="er">//</span>bookdown.org<span class="op">/</span>yihui<span class="op">/</span>bookdown<span class="op">/</span>).</span>
+<span id="cb13-6"><a href="citations-1.html#cb13-6"></a></span>
+<span id="cb13-7"><a href="citations-1.html#cb13-7"></a><span class="co">### References {-}</span></span></code></pre></div>
 
+</div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-abramowitz+stegun">
+<p>Abramowitz, Milton, and Irene A. Stegun. 1964. <em>Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables</em>. Ninth Dover printing, tenth GPO printing. New York City: Dover.</p>
+</div>
+<div id="ref-R-bookdown">
+<p>Xie, Yihui. 2020. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="format.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="additional-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

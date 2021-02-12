@@ -2,7 +2,7 @@
 workshop[0-1][0-9]-[ef][nr].pdf
 workshop[0-1][0-9]-[ef][nr].R
 
-assets
+
 *.html
 *_files
 public/
@@ -17,6 +17,10 @@ master.zip
 # qcbsR*
 !qcbsR-header.html
 !**/mathjax_header.html
+!book-template/assets/header.html
+!book-template/assets/footer.html
+!book-template/assets/big-image.html
+!book-template/
 
 ## Apple OS generated files
 .DS_Store

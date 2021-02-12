@@ -6,6 +6,8 @@ This repository contains the templates and basic instructions for the presentati
 
 *Still under construction. Stay tuned for the upcoming releases!*
 
+There is a working version of for the book template, which can be accessed [here](https://qcbsrworkshops.github.io/templateWorkshops/book-template/).
+
 ## Presentation template (templateWorkshops/presentation-template)
 
 To understand the template, you may see the presentation template `.HTML` file [here](https://qcbsrworkshops.github.io/templateWorkshops/presentation-template/index.html) as well as its `.Rmd` files available within the default branch of this repository.

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Bookdown basics | QCBS R Workshop Series</title>
+  <title>Chapter 3 Workshop structure | QCBS R Workshop Series</title>
   <meta name="description" content="A work-in-progress" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Bookdown basics | QCBS R Workshop Series" />
+  <meta property="og:title" content="Chapter 3 Workshop structure | QCBS R Workshop Series" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://github.com/qcbsRworkshops/" />
   <meta property="og:image" content="https://github.com/qcbsRworkshops/images/logo/csbq_logo_accueil.png" />
@@ -16,12 +16,12 @@
   <meta name="github-repo" content="qcbsRworkshops/templateWorkshops" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Bookdown basics | QCBS R Workshop Series" />
+  <meta name="twitter:title" content="Chapter 3 Workshop structure | QCBS R Workshop Series" />
   
   <meta name="twitter:description" content="A work-in-progress" />
   <meta name="twitter:image" content="https://github.com/qcbsRworkshops/images/logo/csbq_logo_accueil.png" />
 
-<meta name="author" content="Chapter 1 Bookdown basics | QCBS R Workshop Series" />
+<meta name="author" content="Chapter 3 Workshop structure | QCBS R Workshop Series" />
 
 
 <meta name="date" content="2021-02-12" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="format.html"/>
+<link rel="prev" href="format.html"/>
+<link rel="next" href="references-and-citations.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -203,236 +203,33 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container"> 
   <img class= "hero-image" src="images/jean-philippe-delberghe-75xPHEQBmvA-unsplash_hero_image.jpg">
 </div>
-<div id="basics" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Bookdown basics</h1>
-<p>This mateiral uses the <strong>bookdown</strong> package and was built based on ‘<a href="https://github.com/rstudio/bookdown-demo">A Minimal Book Example</a>’as well a excerpts and concepts from’<a href="https://github.com/rstudio/bookdown">bookdown: Authoring Books and Technical Documents with R Markdown</a>’, as well as from other available online resources (especially, <a href="link">link</a>).</p>
-<p>Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>. When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="basics.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="basics.html#cb1-2"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="basics.html#cb1-3"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
-<div id="organization" class="section level2">
-<h2><span class="header-section-number">1.1</span> Organization</h2>
-<p>Subsections can be created using pound signs (<code>#</code>):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="basics.html#cb2-1"></a><span class="co"># First-level header (only for the title)</span></span>
-<span id="cb2-2"><a href="basics.html#cb2-2"></a></span>
-<span id="cb2-3"><a href="basics.html#cb2-3"></a><span class="co">## Second-level header</span></span>
-<span id="cb2-4"><a href="basics.html#cb2-4"></a></span>
-<span id="cb2-5"><a href="basics.html#cb2-5"></a><span class="co">### Third-level header</span></span></code></pre></div>
-<p>The default use of the headers will produce numbers. This can be disabled using <code>{-}</code>after the header, e.g., <code>## Learning objectives {-}</code>.</p>
-</div>
-<div id="cross-referencing" class="section level2">
-<h2><span class="header-section-number">1.2</span> Cross-referencing</h2>
-<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="#intro"><strong>??</strong></a> using <code>\@ref(intro)</code>. If you do not manually label them, there will be automatic labels anyway, e.g., we can reference Chapter <a href="basics.html#citations">1.5</a> using the name of the chapter: <code>\@(citations)</code>.</p>
-</div>
-<div id="code-chunks" class="section level2">
-<h2><span class="header-section-number">1.3</span> Code chunks</h2>
-<p>R code can be embedded into the books like so:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="basics.html#cb3-1"></a><span class="bn">```{r}</span></span>
-<span id="cb3-2"><a href="basics.html#cb3-2"></a><span class="bn">library(datasets)</span></span>
-<span id="cb3-3"><a href="basics.html#cb3-3"></a><span class="bn">cars[1:2,]</span></span>
-<span id="cb3-4"><a href="basics.html#cb3-4"></a><span class="bn">```</span></span></code></pre></div>
-<p>Which yields:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="basics.html#cb4-1"></a><span class="kw">library</span>(datasets)</span>
-<span id="cb4-2"><a href="basics.html#cb4-2"></a>cars[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,]</span></code></pre></div>
-<pre><code>##   speed dist
-## 1     4    2
-## 2     4   10</code></pre>
-<div id="workshop-script" class="section level3">
-<h3><span class="header-section-number">1.3.1</span> Workshop script</h3>
-<p>For participants who wish to have the code used during the workshop so that they can easily follow along, we will now automatically create a script using <code>knitr::purl()</code>.</p>
-<p><code>purl()</code> will automatically extract the code from all the code chunks used in the book. If you consider that a particular code chunk should not be included in the final script, the <code>purl=FALSE</code> option can be used when creating the chunk. Note that <code>purl=TRUE</code> by default. For example, the following chunk would not be included in the script:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="basics.html#cb6-1"></a><span class="bn">```{r purl=FALSE}</span></span>
-<span id="cb6-2"><a href="basics.html#cb6-2"></a><span class="bn">library(datasets)</span></span>
-<span id="cb6-3"><a href="basics.html#cb6-3"></a><span class="bn">cars[1:2,]</span></span>
-<span id="cb6-4"><a href="basics.html#cb6-4"></a><span class="bn">```</span></span></code></pre></div>
-<p>Given that <code>purl()</code> will also extract any comments in chunk, it is encourage to annotate the code in the chunks as much as possible so that the script will be detailed for anyone wishing to use it that was not able to attend the workshop.</p>
+<div id="structure" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Workshop structure</h1>
+<p>In development.</p>
+<div id="objective" class="section level2">
+<h2><span class="header-section-number">3.1</span> Objective</h2>
+<p>We display here basic guidelines to help the transition from the <a href="wiki.qcbs.ca/r">QCBS wikipage</a> towards the <code>bookdown</code> framework, as well as for the maintenance of the <strong>QCBS R Workshop Series</strong>.</p>
+<div id="structure-1" class="section level4">
+<h4><span class="header-section-number">3.1.0.1</span> Structure</h4>
+<p>Following <code>bookdown</code>’s default options, headings will be automatically numbered. If you don’t like this, then you have to un-number them manually. Within any .Rmd you can do this if you:</p>
+<p>Add an {-} after each heading you want unnumbered.
+If your section has an ID within brackets already, just add the - in front, for example:</p>
+<p>Each <strong>section</strong> of the wiki for each workshop will become its own book <strong>chapter</strong>.</p>
+<p>Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading <code>#</code>. The name of the Rmd files should follow this structure: <code>XX-chapter_name.Rmd</code> with <code>XX</code>being the number of the chapter.</p>
 </div>
 </div>
-<div id="figures-and-tables" class="section level2">
-<h2><span class="header-section-number">1.4</span> Figures and tables</h2>
-<p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="basics.html#cb7-1"></a><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span>))</span>
-<span id="cb7-2"><a href="basics.html#cb7-2"></a><span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:nice-fig"></span>
-<img src="book-template_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
-<p class="caption">
-Figure 1.1: Here is a nice figure!
-</p>
+<div id="the-index.rmd-file" class="section level2">
+<h2><span class="header-section-number">3.2</span> The <code>index.Rmd</code> file</h2>
+<p>In addition to the chapters, each book contains an <code>index.Rmd</code> file which will automatically be the first chapter of all books and which should contain links to the <a href="https://github.com/QCBSRworkshops/templateWorkshops">GitHub page</a> and <a href="https://qcbsrworkshops.github.io/templateWorkshops/presentation-template/index.html">presentation</a> for its respective workshop. Notice that this file has no number on its file name. When building the book, bookdown automatically uses the <code>index.Rmd</code>file as the first chapter and then follows the numbering of the other files. Take this into account when naming your chapters as your <code>01-chapter_name.Rmd</code> will actually be the second chapter and so on.</p>
 </div>
-<p>Reference a figure by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <a href="basics.html#fig:nice-fig">1.1</a> using <code>\@ref(fig:nice-fig)</code>. Similarly, you can reference tables generated from <code>knitr::kable()</code>, e.g., see Table <a href="basics.html#tab:nice-tab">1.1</a> using <code>\@ref(tab:nice-tab)</code>.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="basics.html#cb8-1"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
-<span id="cb8-2"><a href="basics.html#cb8-2"></a>  <span class="kw">head</span>(iris, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb8-3"><a href="basics.html#cb8-3"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
-<span id="cb8-4"><a href="basics.html#cb8-4"></a>)</span></code></pre></div>
-<table>
-<caption><span id="tab:nice-tab">Table 1.1: </span>Here is a nice table!</caption>
-<thead>
-<tr class="header">
-<th align="right">Sepal.Length</th>
-<th align="right">Sepal.Width</th>
-<th align="right">Petal.Length</th>
-<th align="right">Petal.Width</th>
-<th align="left">Species</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.7</td>
-<td align="right">3.2</td>
-<td align="right">1.3</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.6</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.0</td>
-<td align="right">3.6</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.7</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.6</td>
-<td align="right">3.4</td>
-<td align="right">1.4</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.0</td>
-<td align="right">3.4</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.4</td>
-<td align="right">2.9</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.4</td>
-<td align="right">3.7</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.8</td>
-<td align="right">3.4</td>
-<td align="right">1.6</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.8</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.3</td>
-<td align="right">3.0</td>
-<td align="right">1.1</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.8</td>
-<td align="right">4.0</td>
-<td align="right">1.2</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.7</td>
-<td align="right">4.4</td>
-<td align="right">1.5</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.3</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.7</td>
-<td align="right">3.8</td>
-<td align="right">1.7</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.1</td>
-<td align="right">3.8</td>
-<td align="right">1.5</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-</tbody>
-</table>
+<div id="additional-resources-chapter" class="section level2">
+<h2><span class="header-section-number">3.3</span> Additional Resources chapter</h2>
+<p>The books should also contain a final chapter called <code>XX-references.Rmd</code> which will contain any citations that you used and can also contain any additional material and resources if participants wish to obtain more information on the subject. Please refer to Chapter <a href="basics.html#citations">1.5</a> for more information on how create the content of this chapter.</p>
 </div>
-<div id="citations" class="section level2">
-<h2><span class="header-section-number">1.5</span> Citations</h2>
-<p>You can write citations, too. For example, we are using the <strong>bookdown</strong> package <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2020</a>)</span> in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(Xie <a href="#ref-knitr2015" role="doc-biblioref">2015</a>)</span>. See Chapter <a href="basics.html#citations">1.5</a> for more information on how to make citations.</p>
+<div id="example" class="section level2 unnumbered">
+<h2>Example</h2>
+<p>For example, the English version of the <a href="https://wiki.qcbs.ca/r_workshop1">wiki</a> for Workshop 1 has 8 sections. So the book would have a total of 10 Rmd files which include the <code>index.Rmd</code> file, 8 <code>XX-chapter_name.Rmd</code> files numbered <code>01 - 08</code>, and the final <code>9-references.Rmd</code>file.</p>
 
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-knitr2015">
-<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.</p>
-</div>
-<div id="ref-R-bookdown">
-<p>Xie, Yihui. 2020. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.</p>
 </div>
 </div>
 <hr>
@@ -446,8 +243,8 @@ Figure 1.1: Here is a nice figure!
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="format.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="format.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references-and-citations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

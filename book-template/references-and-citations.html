@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Bookdown basics | QCBS R Workshop Series</title>
+  <title>Chapter 4 References and citations | QCBS R Workshop Series</title>
   <meta name="description" content="A work-in-progress" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Bookdown basics | QCBS R Workshop Series" />
+  <meta property="og:title" content="Chapter 4 References and citations | QCBS R Workshop Series" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://github.com/qcbsRworkshops/" />
   <meta property="og:image" content="https://github.com/qcbsRworkshops/images/logo/csbq_logo_accueil.png" />
@@ -16,12 +16,12 @@
   <meta name="github-repo" content="qcbsRworkshops/templateWorkshops" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Bookdown basics | QCBS R Workshop Series" />
+  <meta name="twitter:title" content="Chapter 4 References and citations | QCBS R Workshop Series" />
   
   <meta name="twitter:description" content="A work-in-progress" />
   <meta name="twitter:image" content="https://github.com/qcbsRworkshops/images/logo/csbq_logo_accueil.png" />
 
-<meta name="author" content="Chapter 1 Bookdown basics | QCBS R Workshop Series" />
+<meta name="author" content="Chapter 4 References and citations | QCBS R Workshop Series" />
 
 
 <meta name="date" content="2021-02-12" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="prev" href="index.html"/>
-<link rel="next" href="format.html"/>
+<link rel="prev" href="structure.html"/>
+<link rel="next" href="additional-resources.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -203,233 +203,87 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="hero-image-container"> 
   <img class= "hero-image" src="images/jean-philippe-delberghe-75xPHEQBmvA-unsplash_hero_image.jpg">
 </div>
-<div id="basics" class="section level1">
-<h1><span class="header-section-number">Chapter 1</span> Bookdown basics</h1>
-<p>This mateiral uses the <strong>bookdown</strong> package and was built based on ‘<a href="https://github.com/rstudio/bookdown-demo">A Minimal Book Example</a>’as well a excerpts and concepts from’<a href="https://github.com/rstudio/bookdown">bookdown: Authoring Books and Technical Documents with R Markdown</a>’, as well as from other available online resources (especially, <a href="link">link</a>).</p>
-<p>Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>. When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.</p>
-<p>The <strong>bookdown</strong> package can be installed from CRAN or Github:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="basics.html#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">&quot;bookdown&quot;</span>)</span>
-<span id="cb1-2"><a href="basics.html#cb1-2"></a><span class="co"># or the development version</span></span>
-<span id="cb1-3"><a href="basics.html#cb1-3"></a><span class="co"># devtools::install_github(&quot;rstudio/bookdown&quot;)</span></span></code></pre></div>
-<div id="organization" class="section level2">
-<h2><span class="header-section-number">1.1</span> Organization</h2>
-<p>Subsections can be created using pound signs (<code>#</code>):</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="basics.html#cb2-1"></a><span class="co"># First-level header (only for the title)</span></span>
-<span id="cb2-2"><a href="basics.html#cb2-2"></a></span>
-<span id="cb2-3"><a href="basics.html#cb2-3"></a><span class="co">## Second-level header</span></span>
-<span id="cb2-4"><a href="basics.html#cb2-4"></a></span>
-<span id="cb2-5"><a href="basics.html#cb2-5"></a><span class="co">### Third-level header</span></span></code></pre></div>
-<p>The default use of the headers will produce numbers. This can be disabled using <code>{-}</code>after the header, e.g., <code>## Learning objectives {-}</code>.</p>
+<div id="references-and-citations" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> References and citations</h1>
+<p>In development.</p>
+<p>We already covered the basics on how to insert an inline citation on Chapter <a href="basics.html#basics">1</a>. However, those examples only work for this book because they are the packages we are using to create the book. If we wanted to cite another package or a book/article/etc., we first have to create the bibliography entries of those packages, books, articles, etc.</p>
+<div id="the-bibtex-format" class="section level2">
+<h2><span class="header-section-number">4.1</span> The BibTeX format</h2>
+<p>Bookdown uses <code>pandoc-citeproc</code> for its html output. Many bibliography formats can be used by <code>pandoc-citeproc</code>, but <a href="http://www.bibtex.org/">BibTex</a> is quite simple and relatively standard so we will use it for our books.</p>
+<p>Here is a basic example of a BibTex entry:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="references-and-citations.html#cb17-1"></a><span class="op">@</span>Book{abramowitz<span class="op">+</span>stegun,</span>
+<span id="cb17-2"><a href="references-and-citations.html#cb17-2"></a> author    =<span class="st"> &quot;Milton {Abramowitz} and Irene A. {Stegun}&quot;</span>,</span>
+<span id="cb17-3"><a href="references-and-citations.html#cb17-3"></a> title     =<span class="st"> &quot;Handbook of Mathematical Functions with</span></span>
+<span id="cb17-4"><a href="references-and-citations.html#cb17-4"></a><span class="st">              Formulas, Graphs, and Mathematical Tables&quot;</span>,</span>
+<span id="cb17-5"><a href="references-and-citations.html#cb17-5"></a> publisher =<span class="st"> &quot;Dover&quot;</span>,</span>
+<span id="cb17-6"><a href="references-and-citations.html#cb17-6"></a> year      =<span class="st">  </span><span class="dv">1964</span>,</span>
+<span id="cb17-7"><a href="references-and-citations.html#cb17-7"></a> address   =<span class="st"> &quot;New York City&quot;</span>,</span>
+<span id="cb17-8"><a href="references-and-citations.html#cb17-8"></a> edition   =<span class="st"> &quot;ninth Dover printing, tenth GPO printing&quot;</span></span>
+<span id="cb17-9"><a href="references-and-citations.html#cb17-9"></a>}</span></code></pre></div>
+<p>Now let’s see what the structure of the entry is:</p>
+<ul>
+<li>Each entry starts with a type (e.g. <code>@Book{</code>) such as <code>article</code> or <code>book</code>, among others.</li>
+<li>It is then followed by a citation-key (e.g. <code>abramowitz+stegun,</code>) which can be used to produce the inline citations. So if we wanted to cite our example book we would use <code>@abramowitz+stegun</code> to produce this citation: <span class="citation">Abramowitz and Stegun (<a href="#ref-abramowitz+stegun" role="doc-biblioref">1964</a>)</span>.</li>
+<li>Finally, the entry has multiple tags which give the characteristics of the entry (e.g. author, title, year, etc.)
+<ul>
+<li>There are some required tags for each type of entry as well as some optional ones.</li>
+</ul></li>
+</ul>
+<p>You can find a list of the different types and the required and optional tags for each type <a href="https://en.wikipedia.org/wiki/BibTeX">here</a>.</p>
 </div>
-<div id="cross-referencing" class="section level2">
-<h2><span class="header-section-number">1.2</span> Cross-referencing</h2>
-<p>You can label chapter and section titles using <code>{#label}</code> after them, e.g., we can reference Chapter <a href="#intro"><strong>??</strong></a> using <code>\@ref(intro)</code>. If you do not manually label them, there will be automatic labels anyway, e.g., we can reference Chapter <a href="basics.html#citations">1.5</a> using the name of the chapter: <code>\@(citations)</code>.</p>
-</div>
-<div id="code-chunks" class="section level2">
-<h2><span class="header-section-number">1.3</span> Code chunks</h2>
-<p>R code can be embedded into the books like so:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb3-1"><a href="basics.html#cb3-1"></a><span class="bn">```{r}</span></span>
-<span id="cb3-2"><a href="basics.html#cb3-2"></a><span class="bn">library(datasets)</span></span>
-<span id="cb3-3"><a href="basics.html#cb3-3"></a><span class="bn">cars[1:2,]</span></span>
-<span id="cb3-4"><a href="basics.html#cb3-4"></a><span class="bn">```</span></span></code></pre></div>
-<p>Which yields:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="basics.html#cb4-1"></a><span class="kw">library</span>(datasets)</span>
-<span id="cb4-2"><a href="basics.html#cb4-2"></a>cars[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>,]</span></code></pre></div>
-<pre><code>##   speed dist
-## 1     4    2
-## 2     4   10</code></pre>
-<div id="workshop-script" class="section level3">
-<h3><span class="header-section-number">1.3.1</span> Workshop script</h3>
-<p>For participants who wish to have the code used during the workshop so that they can easily follow along, we will now automatically create a script using <code>knitr::purl()</code>.</p>
-<p><code>purl()</code> will automatically extract the code from all the code chunks used in the book. If you consider that a particular code chunk should not be included in the final script, the <code>purl=FALSE</code> option can be used when creating the chunk. Note that <code>purl=TRUE</code> by default. For example, the following chunk would not be included in the script:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb6-1"><a href="basics.html#cb6-1"></a><span class="bn">```{r purl=FALSE}</span></span>
-<span id="cb6-2"><a href="basics.html#cb6-2"></a><span class="bn">library(datasets)</span></span>
-<span id="cb6-3"><a href="basics.html#cb6-3"></a><span class="bn">cars[1:2,]</span></span>
-<span id="cb6-4"><a href="basics.html#cb6-4"></a><span class="bn">```</span></span></code></pre></div>
-<p>Given that <code>purl()</code> will also extract any comments in chunk, it is encourage to annotate the code in the chunks as much as possible so that the script will be detailed for anyone wishing to use it that was not able to attend the workshop.</p>
+<div id="creating-a-bibtex-database" class="section level2">
+<h2><span class="header-section-number">4.2</span> Creating a BibTeX database</h2>
+<p>Now that we know the basics about BibTeX, we can apply it. For this, we have to create a BibTeX database which is a plain-text file with a <code>.bib</code> extension. For example, we created an <code>example.bib</code>file so that we could use the <span class="citation">Abramowitz and Stegun (<a href="#ref-abramowitz+stegun" role="doc-biblioref">1964</a>)</span> citation.</p>
+<p>The file name for the database of each workshop should be <code>workshop-X-citations.bib</code>.</p>
+<div id="r-packages" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> R packages</h3>
+<p>If you wish to cite any R packages, <strong>knitr</strong> contains the helper function <code>write_bib()</code> that automatically produces the BibTeX entries for the selected packages and creates a datbase for the packages. Here is an example that this template uses to produce citations such as this one for <strong>bookdown</strong> <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2020</a>)</span>:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="references-and-citations.html#cb18-1"></a>knitr<span class="op">::</span><span class="kw">write_bib</span>(<span class="kw">c</span>(</span>
+<span id="cb18-2"><a href="references-and-citations.html#cb18-2"></a>  <span class="kw">.packages</span>(), <span class="st">&#39;bookdown&#39;</span>, <span class="st">&#39;knitr&#39;</span>, <span class="st">&#39;rmarkdown&#39;</span></span>
+<span id="cb18-3"><a href="references-and-citations.html#cb18-3"></a>), <span class="st">&#39;packages.bib&#39;</span>)</span></code></pre></div>
 </div>
 </div>
-<div id="figures-and-tables" class="section level2">
-<h2><span class="header-section-number">1.4</span> Figures and tables</h2>
-<p>Figures and tables with captions will be placed in <code>figure</code> and <code>table</code> environments, respectively.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="basics.html#cb7-1"></a><span class="kw">par</span>(<span class="dt">mar =</span> <span class="kw">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span>))</span>
-<span id="cb7-2"><a href="basics.html#cb7-2"></a><span class="kw">plot</span>(pressure, <span class="dt">type =</span> <span class="st">&#39;b&#39;</span>, <span class="dt">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:nice-fig"></span>
-<img src="book-template_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
-<p class="caption">
-Figure 1.1: Here is a nice figure!
-</p>
+<div id="adding-the-bibtex-database" class="section level2">
+<h2><span class="header-section-number">4.3</span> Adding the BibTeX database</h2>
+<p>To include the database in the book, you must:</p>
+<ul>
+<li>Save the <code>.bib</code> file in the <code>book-en</code> or <code>book-fr</code> folder.</li>
+<li>Add the file name to the <code>bibliography</code> field in the YAML metadata section of the <code>index.Rmd</code> file.
+<ul>
+<li>Multiple database files can be included. For example, the <code>bibliography</code> field of this template looks like this:</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="references-and-citations.html#cb19-1"></a>bibliography<span class="op">:</span><span class="st"> </span>[packages.bib, example.bib]</span></code></pre></div>
 </div>
-<p>Reference a figure by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <a href="basics.html#fig:nice-fig">1.1</a> using <code>\@ref(fig:nice-fig)</code>. Similarly, you can reference tables generated from <code>knitr::kable()</code>, e.g., see Table <a href="basics.html#tab:nice-tab">1.1</a> using <code>\@ref(tab:nice-tab)</code>.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="basics.html#cb8-1"></a>knitr<span class="op">::</span><span class="kw">kable</span>(</span>
-<span id="cb8-2"><a href="basics.html#cb8-2"></a>  <span class="kw">head</span>(iris, <span class="dv">20</span>), <span class="dt">caption =</span> <span class="st">&#39;Here is a nice table!&#39;</span>,</span>
-<span id="cb8-3"><a href="basics.html#cb8-3"></a>  <span class="dt">booktabs =</span> <span class="ot">TRUE</span></span>
-<span id="cb8-4"><a href="basics.html#cb8-4"></a>)</span></code></pre></div>
-<table>
-<caption><span id="tab:nice-tab">Table 1.1: </span>Here is a nice table!</caption>
-<thead>
-<tr class="header">
-<th align="right">Sepal.Length</th>
-<th align="right">Sepal.Width</th>
-<th align="right">Petal.Length</th>
-<th align="right">Petal.Width</th>
-<th align="left">Species</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.7</td>
-<td align="right">3.2</td>
-<td align="right">1.3</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.6</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.0</td>
-<td align="right">3.6</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.7</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.6</td>
-<td align="right">3.4</td>
-<td align="right">1.4</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.0</td>
-<td align="right">3.4</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.4</td>
-<td align="right">2.9</td>
-<td align="right">1.4</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.9</td>
-<td align="right">3.1</td>
-<td align="right">1.5</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.4</td>
-<td align="right">3.7</td>
-<td align="right">1.5</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.8</td>
-<td align="right">3.4</td>
-<td align="right">1.6</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">4.8</td>
-<td align="right">3.0</td>
-<td align="right">1.4</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">4.3</td>
-<td align="right">3.0</td>
-<td align="right">1.1</td>
-<td align="right">0.1</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.8</td>
-<td align="right">4.0</td>
-<td align="right">1.2</td>
-<td align="right">0.2</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.7</td>
-<td align="right">4.4</td>
-<td align="right">1.5</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.4</td>
-<td align="right">3.9</td>
-<td align="right">1.3</td>
-<td align="right">0.4</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.1</td>
-<td align="right">3.5</td>
-<td align="right">1.4</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="odd">
-<td align="right">5.7</td>
-<td align="right">3.8</td>
-<td align="right">1.7</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-<tr class="even">
-<td align="right">5.1</td>
-<td align="right">3.8</td>
-<td align="right">1.5</td>
-<td align="right">0.3</td>
-<td align="left">setosa</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="citations" class="section level2">
-<h2><span class="header-section-number">1.5</span> Citations</h2>
-<p>You can write citations, too. For example, we are using the <strong>bookdown</strong> package <span class="citation">(Xie <a href="#ref-R-bookdown" role="doc-biblioref">2020</a>)</span> in this sample book, which was built on top of R Markdown and <strong>knitr</strong> <span class="citation">(Xie <a href="#ref-knitr2015" role="doc-biblioref">2015</a>)</span>. See Chapter <a href="basics.html#citations">1.5</a> for more information on how to make citations.</p>
+<div id="the-xx-references.rmd-file" class="section level2">
+<h2><span class="header-section-number">4.4</span> The <code>XX-references.Rmd</code> file</h2>
+<p>The basic format of this Rmd file should only contain the following expression:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="references-and-citations.html#cb20-1"></a><span class="st">`</span><span class="dt">r if (knitr::is_html_output()) &#39;# Additional resources {-}&#39;</span><span class="st">`</span></span>
+<span id="cb20-2"><a href="references-and-citations.html#cb20-2"></a></span>
+<span id="cb20-3"><a href="references-and-citations.html#cb20-3"></a><span class="co">### References {-}</span></span></code></pre></div>
+<p>This will output only the references we included in the main BibTeX database (i.e. the <code>workshop-X-citations.bib</code> file) and any packages we cited inside the book.</p>
+<ul>
+<li>Note that this will not include the rest of the package reference entries created by <strong>knitr</strong> if they were not cited inside the book.</li>
+</ul>
+<div id="including-other-resources" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> Including other resources</h3>
+<p>Most of the wikis for the QCBS R Workshop Series contain a section at the end where we offer additional resources for the participants interested in more information about the subject of the workshop.</p>
+<p>To include these into this last chapter of the book, you can add a new subsection after the basic expression showed above. In this book, we have included a link to the <strong>bookdown</strong> manual as an additional resource like this:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="references-and-citations.html#cb21-1"></a><span class="st">`</span><span class="dt">r if (knitr::is_html_output()) &#39;</span></span>
+<span id="cb21-2"><a href="references-and-citations.html#cb21-2"></a><span class="dt"># Additional resources {-}</span></span>
+<span id="cb21-3"><a href="references-and-citations.html#cb21-3"></a><span class="dt">&#39;</span><span class="st">`</span></span>
+<span id="cb21-4"><a href="references-and-citations.html#cb21-4"></a></span>
+<span id="cb21-5"><a href="references-and-citations.html#cb21-5"></a>For more information on how to use bookdown, you can check the bookdown manual [here](https<span class="op">:</span><span class="er">//</span>bookdown.org<span class="op">/</span>yihui<span class="op">/</span>bookdown<span class="op">/</span>).</span>
+<span id="cb21-6"><a href="references-and-citations.html#cb21-6"></a></span>
+<span id="cb21-7"><a href="references-and-citations.html#cb21-7"></a><span class="co">### References {-}</span></span></code></pre></div>
 
+</div>
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-knitr2015">
-<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://yihui.org/knitr/">https://yihui.org/knitr/</a>.</p>
+<div id="ref-abramowitz+stegun">
+<p>Abramowitz, Milton, and Irene A. Stegun. 1964. <em>Handbook of Mathematical Functions with Formulas, Graphs, and Mathematical Tables</em>. Ninth Dover printing, tenth GPO printing. New York City: Dover.</p>
 </div>
 <div id="ref-R-bookdown">
 <p>Xie, Yihui. 2020. <em>Bookdown: Authoring Books and Technical Documents with R Markdown</em>. <a href="https://github.com/rstudio/bookdown">https://github.com/rstudio/bookdown</a>.</p>
@@ -446,8 +300,8 @@ Figure 1.1: Here is a nice figure!
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="format.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="structure.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="additional-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

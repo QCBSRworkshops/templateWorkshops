@@ -219,9 +219,10 @@ Here, we can also use special note tips by writing `:::` followed by one of the 
 To make special explanation boxes, use `explanation`:
 
 :::explanation
-You use a div tip by writing `:::` following by the name that you assigned to it in the CSS after the `div`.
-:::
 
+You use a div tip by writing `:::` following by the name that you assigned to it in the CSS after the `div`.
+
+:::
 
 To pose thoughtful questions to the readers, use `puzzle`:
 

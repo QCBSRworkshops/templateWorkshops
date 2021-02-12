@@ -251,11 +251,6 @@ li.appendix span, li.part span { /* for TOC part names */
     background-position: 15px center;
     min-height: 100px;
     color: #15395d;
-    position: relative;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
     background-color: #edf3f9;
     border: solid 5px #f9fbfd;
   }

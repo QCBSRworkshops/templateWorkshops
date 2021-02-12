@@ -1,35 +1,29 @@
 --- 
-title: "Template guide for the QCBS R Workshop Series"
-author: "Québec Centre for Biodiversity Science"
+title: "QCBS R Workshop Series"
+subtitle: "A template guide for the written material"
+author:
+- QCBS R Workshop Series^[The QCBS R Workshop Series is part of the Québec Centre for Biodiversity Science, and is maintained by the series coordinators and graduent student, postdoctoral, and research professional members. https://www.qcbs.ca]
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [packages.bib, example.bib]
+bibliography: ["packages.bib", "example.bib"]
 biblio-style: apalike
 link-citations: yes
-description: "This is the template that the books for all the workshops of the QCBS R Workshop Series will follow."
+cover-image: images/logo/csbq_logo_accueil.png
+github-repo: "qcbsRworkshops/templateWorkshops"
+description: "A work-in-progress"
+favicon: "images/favicon.ico"
+always_allow_html: yes
+url: 'https\://github.com/qcbsRworkshops/'
+config:
+  edit:
+    link: https://github.com/qcbsRworkshops/templateWorkshops/edit/main/book-template/%s
+    text: "Edit"
+  
 ---
 
-# Introduction {#intro}
+# Preface {-}
 
-This is a _template_ book written in **Markdown** using the **bookdown** package and based on '[A Minimal Book Example](https://github.com/rstudio/bookdown-demo)'as well a excerpts and concepts from '[bookdown: Authoring Books and Technical Documents with R Markdown](https://github.com/rstudio/bookdown)'.
+This is a _template_ book written in **Markdown** and its purpose is to serve as a basis for the QCBS R Workshop Series and to serve as a guide for developers and contributors willing to modify the written material.
 
-Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com. When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
-
-New changes coming soon!
-
-The **bookdown** package can be installed from CRAN or Github:
-
-```{r eval=FALSE}
-install.packages("bookdown")
-# or the development version
-# devtools::install_github("rstudio/bookdown")
-```
-
-
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
-```
+New changes are coming soon!

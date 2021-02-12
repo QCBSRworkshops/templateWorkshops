@@ -1,10 +1,19 @@
-# Format of the book {#format}
+# Workshop structure {#structure}
 
 In development.
 
-## Basic structure
+## Objective
 
-As we make the transition from the QCBS wiki into the bookdown books, the basic idea will be that each **section** of the wiki for each workshop will become its own book **chapter**.
+We display here basic guidelines to help the transition from the [QCBS wikipage](wiki.qcbs.ca/r) towards the `bookdown` framework, as well as for the maintenance of the **QCBS R Workshop Series**. 
+
+#### Structure
+
+Following `bookdown`'s default options, headings will be automatically numbered.  If you don’t like this, then you have to un-number them manually. Within any .Rmd you can do this if you:
+
+Add an {-} after each heading you want unnumbered.
+If your section has an ID within brackets already, just add the - in front, for example:
+
+Each **section** of the wiki for each workshop will become its own book **chapter**.
 
 Each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`. The name of the Rmd files should follow this structure: `XX-chapter_name.Rmd` with `XX`being the number of the chapter.
 

@@ -1,6 +1,6 @@
 # Bookdown basics {#basics}
 
-This mateiral uses the **bookdown** package and was built based on '[A Minimal Book Example](https://github.com/rstudio/bookdown-demo)'as well a excerpts and concepts from '[bookdown: Authoring Books and Technical Documents with R Markdown](https://github.com/rstudio/bookdown)', as well as from other available online resources (especially, [link](link)).
+This material uses the **bookdown** package and was built based on '[A Minimal Book Example](https://github.com/rstudio/bookdown-demo)'as well a excerpts and concepts from '[bookdown: Authoring Books and Technical Documents with R Markdown](https://github.com/rstudio/bookdown)', as well as from other available online resources (especially, [link](link)).
 
 Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com. When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
 
@@ -90,5 +90,3 @@ knitr::kable(
 ## Citations
 
 You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@knitr2015]. See Chapter \@ref(citations) for more information on how to make citations.
-
-

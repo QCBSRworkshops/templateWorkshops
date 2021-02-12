@@ -18,8 +18,7 @@ url: 'https\://github.com/qcbsRworkshops/'
 config:
   edit:
     link: https://github.com/qcbsRworkshops/templateWorkshops/edit/main/book-template/%s
-    text: "Edit"
-  
+    text: "Suggest changes"
 ---
 
 # Preface {-}

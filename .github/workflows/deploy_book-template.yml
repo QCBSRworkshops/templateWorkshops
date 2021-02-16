@@ -4,6 +4,7 @@ on:
        - main
      paths:
        - book-template/**
+       - .github/workflows/deploy_book-template.yml
 
 name: render-book-template
 
@@ -21,6 +22,8 @@ jobs:
 
       - name: Setup R  
         uses: r-lib/actions/setup-r@v1
+        with:
+          r-version: '4.0.2' # the r-version to download
       
       - name: Cache R packages
         uses: actions/cache@v2

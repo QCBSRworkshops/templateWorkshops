@@ -9,10 +9,10 @@ documentclass: book
 bibliography: ["packages.bib", "example.bib"]
 biblio-style: apalike
 link-citations: yes
-cover-image: images/logo/csbq_logo_accueil.png
+cover-image: assets/images/logo/csbq_logo_accueil.png
 github-repo: "qcbsRworkshops/templateWorkshops"
 description: "A work-in-progress"
-favicon: "images/favicon.ico"
+favicon: "assets/images/favicon.ico"
 always_allow_html: yes
 url: 'https\://github.com/qcbsRworkshops/'
 config:

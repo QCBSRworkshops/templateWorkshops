@@ -23,7 +23,7 @@ jobs:
       - name: Setup R  
         uses: r-lib/actions/setup-r@v1
         with:
-          r-version: '4.0.2' # the r-version to download
+          r-version: 4.0.3 # the r-version to download
       
       - name: Cache R packages
         uses: actions/cache@v2
@@ -81,7 +81,7 @@ jobs:
           TARGET_FOLDER: book-template # The folder the action should deploy
           CLEAN: true
 
-# Dispatch a ping to the workshop06 repository that will be received by a workflow, which in turn, will trigger the other workflows
+# Dispatch a ping to the workshops repositories that will be received by a workflow, which in turn, will trigger the other workflows
 # Transform into a matrix to add all workshops
 
   dispatch-to-workshops:

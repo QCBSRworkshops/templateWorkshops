@@ -256,23 +256,23 @@ li.appendix span, li.part span { /* for TOC part names */
   }
 
 div.puzzle {
-  background-image: url("../images/puzzle_icon.png");
+  background-image: url("../assets/images/puzzle_icon.png");
 }
 
 div.explanation {
- background-image: url("../images/math_icon.png");
+ background-image: url("../assets/images/math_icon.png");
 }
 
 div.noway {
-  background-image: url("../images/noway_icon.png");
+  background-image: url("../assets/images/noway_icon.png");
 }
 
 div.angry {
-  background-image: url("../images/angry_icon.png");
+  background-image: url("../assets/images/angry_icon.png");
 }
 
 div.tip {
-  background-image: url("../images/lightbulb.png");
+  background-image: url("../assets/images/lightbulb.png");
 }
 
 /* from rstudio4edu */

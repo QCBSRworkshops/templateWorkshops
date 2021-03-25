@@ -54,6 +54,11 @@ library(datasets)
 cars[1:2,]
 ```
 
+:::noway
+Please refrain from using multiple `#` signs when writing annotations inside the code chunks as this could be interpreted by Bookdown as a new header instead of an annotation.
+:::
+
+
 ### Workshop script
 
 For participants who wish to have the code used during the workshop so that they can easily follow along, we will now automatically create a script using `knitr::purl()`.

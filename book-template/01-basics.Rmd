@@ -43,8 +43,9 @@ R code can be embedded into the books like so:
 
 ````markdown
 `r ''````{r}
-library(datasets)
-cars[1:2,]
+library(palmerpenguins)
+
+penguins[1:2,]
 ```
 ````
 
@@ -90,7 +91,7 @@ Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Fig
 
 ```{r nice-tab, tidy=FALSE}
 knitr::kable(
-  head(penguins, 20), caption = 'Here is a nice table!',
+  head(penguins[ , 1:7], 20), caption = 'Here is a nice table!',
   booktabs = TRUE
 )
 ```

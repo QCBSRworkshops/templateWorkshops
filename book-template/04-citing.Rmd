@@ -2,7 +2,7 @@
 
 In development.
 
-We already covered the basics on how to insert an inline citation on Chapter \@ref(basics). However, those examples only work for this book because they are the packages we are using to create the book. If we wanted to cite another package or a book/article/etc., we first have to create the bibliography entries of those packages, books, articles, etc.
+We already covered the basics on how to insert an inline citation on Chapter \@ref(basics). However, those examples only work for this book because they are the packages we are using to create the book. If we wanted to cite another package or a book, article, we first have to create the bibliography entries for them.
 
 ## The BibTeX format
 Bookdown uses `pandoc-citeproc` for its html output. Many bibliography formats can be used by `pandoc-citeproc`, but [BibTex](http://www.bibtex.org/) is quite simple and relatively standard so we will use it for our books.

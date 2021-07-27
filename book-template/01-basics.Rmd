@@ -50,8 +50,9 @@ cars[1:2,]
 
 Which yields:
 ```{r}
-library(datasets)
-cars[1:2,]
+library(palmerpenguins)
+
+penguins[1:2,]
 ```
 
 :::noway
@@ -67,8 +68,9 @@ For participants who wish to have the code used during the workshop so that they
 
 ````markdown
 `r ''````{r purl=FALSE}
-library(datasets)
-cars[1:2,]
+library(palmerpenguins)
+
+penguins[1:2,]
 ```
 ````
 
@@ -80,14 +82,15 @@ Figures and tables with captions will be placed in `figure` and `table` environm
 
 ```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
 par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 19)
+
+plot(penguins[, c("species", "body_mass_g")])
 ```
 
 Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig) using `\@ref(fig:nice-fig)`. Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab) using `\@ref(tab:nice-tab)`.
 
 ```{r nice-tab, tidy=FALSE}
 knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
+  head(penguins, 20), caption = 'Here is a nice table!',
   booktabs = TRUE
 )
 ```

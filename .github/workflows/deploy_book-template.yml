@@ -36,7 +36,7 @@ jobs:
         
       - name: Install R packages and dependencies
         run: |
-          Rscript -e 'options(Ncpus = 4); pkgs = c("rmarkdown", "bookdown", "formatR"); 
+          Rscript -e 'options(Ncpus = 4); pkgs = c("rmarkdown", "bookdown", "formatR", "palmerpenguins"); 
           if(length(new.pkgs <- setdiff(pkgs, rownames(installed.packages())))) install.packages(new.pkgs)'
    
       - name: Render the book using bookdown

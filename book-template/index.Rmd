@@ -26,3 +26,9 @@ config:
 This is a _template_ book written in **Markdown** and its purpose is to serve as a basis for the QCBS R Workshop Series and to serve as a guide for developers and contributors willing to modify the written material.
 
 New changes are coming soon!
+
+
+
+```{r include=FALSE}
+options(repos = structure(c(CRAN = "http://cran.r-project.org")))
+```

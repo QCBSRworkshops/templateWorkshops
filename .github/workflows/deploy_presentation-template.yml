@@ -70,13 +70,13 @@ jobs:
          path: presentation-template/ # optional
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: presentation-template/
-          TARGET_FOLDER: presentation-template # The folder the action should deploy
-          CLEAN: true
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages # The branch the action should deploy to.
+          folder: presentation-template/
+          target-folder: presentation-template # The folder the action should deploy
+          clean: true
 
 # Dispatch a ping to the workshops repositories that will be received by a workflow, which in turn, will trigger the other workflows
 # Transform into a matrix to add all workshops

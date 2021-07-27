@@ -73,13 +73,14 @@ jobs:
          path: book-template/ # optional
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-actionn@4.1.4
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: book-template/_book/
-          TARGET_FOLDER: book-template # The folder the action should deploy
-          CLEAN: true
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: gh-pages # The branch the action should deploy to.
+          folder: book-template/_book/
+          target-folder: book-template # The folder the action should deploy
+          clean: true
+
 
 # Dispatch a ping to the workshops repositories that will be received by a workflow, which in turn, will trigger the other workflows
 # Transform into a matrix to add all workshops

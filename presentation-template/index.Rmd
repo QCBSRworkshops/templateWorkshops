@@ -702,3 +702,4 @@ class: inverse, center, bottom
 ![:scale 50%](images/qcbs_logo.png)
 
 <br>
+
